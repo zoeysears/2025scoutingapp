@@ -66,6 +66,7 @@
         android:id="@+id/autoNotesIncrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="autoIncrementNotes"
         android:text="+"
         android:textSize="96sp"
         app:layout_constraintBottom_toBottomOf="@+id/autoNotesCountTextView"
@@ -77,6 +78,7 @@
         android:id="@+id/autoNotesDecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="autoDecrementNotes"
         android:text="-"
         android:textSize="96sp"
         app:layout_constraintBottom_toBottomOf="@+id/autoNotesCountTextView"
@@ -110,6 +112,7 @@
         android:id="@+id/autoAmpNotesIncrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="autoIncrementAmpNotes"
         android:text="+"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="@+id/autoAmpNotesCountTextView"
@@ -118,9 +121,10 @@
         app:layout_constraintTop_toTopOf="@+id/autoAmpNotesCountTextView" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/autoAmpNotesDecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="autoDecrementAmpNotes"
         android:text="-"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="@+id/autoAmpNotesCountTextView"
@@ -129,7 +133,7 @@
         app:layout_constraintTop_toTopOf="@+id/autoAmpNotesCountTextView" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/autoSpeakerNotesTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="732dp"
@@ -140,7 +144,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/autoSpeakerNotesCountTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="820dp"
@@ -151,35 +155,38 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/autoSpeakerNotesIncrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="autoIncrementSpeakerNotes"
         android:text="+"
         android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintBottom_toBottomOf="@+id/autoSpeakerNotesCountTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toTopOf="@+id/textView6" />
+        app:layout_constraintStart_toEndOf="@+id/autoSpeakerNotesCountTextView"
+        app:layout_constraintTop_toTopOf="@+id/autoSpeakerNotesCountTextView" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/autoSpeakerNotesDecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="autoDecrementSpeakerNotes"
         android:text="-"
         android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView6"
-        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintBottom_toBottomOf="@+id/autoSpeakerNotesCountTextView"
+        app:layout_constraintEnd_toStartOf="@+id/autoSpeakerNotesCountTextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView6" />
+        app:layout_constraintTop_toTopOf="@+id/autoSpeakerNotesCountTextView" />
 
     <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="562dp"
-        android:layout_height="75dp"
+        android:id="@+id/autoCommentEditText"
+        android:layout_width="740dp"
+        android:layout_height="114dp"
         android:layout_marginTop="1000dp"
         android:ems="10"
         android:hint="Comments (missed pieces, hitting other robots, incorrect auto, etc)"
         android:inputType="text"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
