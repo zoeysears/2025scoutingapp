@@ -6,8 +6,8 @@ public class RecordsActivity {
         public static String scoutName = "";
         public static String matchNumber = "";
         public static String teamNumber = "";
-        public static int driverStation = 0;
-        public static int fieldPosition = 0;
+        public static byte driverStation = 0;
+        public static byte fieldPosition = 0;
 
     }
 }

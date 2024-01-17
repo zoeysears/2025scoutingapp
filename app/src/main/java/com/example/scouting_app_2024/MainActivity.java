@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     EditText scoutName, matchNumber, teamNumber;
     RadioButton red1, red2, red3, pos1, pos2, pos3, pos4;
     RadioButton[] positions;
-    int checkedPosition;
+    int checkedPosition = -1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,29 +34,39 @@ public class MainActivity extends AppCompatActivity {
         switch (RecordsActivity.Info.driverStation) {
             case 1:
                 red1.setChecked(true);
+                break;
             case 2:
                 red2.setChecked(true);
+                break;
             case 3:
                 red3.setChecked(true);
+                break;
             default:
                 red1.setChecked(false);
                 red2.setChecked(false);
                 red3.setChecked(false);
+                break;
         }
+
         switch (RecordsActivity.Info.fieldPosition){
             case 1:
                 pos1.setChecked(true);
+                break;
             case 2:
                 pos2.setChecked(true);
+                break;
             case 3:
                 pos3.setChecked(true);
+                break;
             case 4:
                 pos4.setChecked(true);
+                break;
             default:
                 pos1.setChecked(false);
                 pos2.setChecked(false);
                 pos3.setChecked(false);
                 pos4.setChecked(false);
+                break;
         }
     }
 
@@ -112,15 +122,26 @@ public class MainActivity extends AppCompatActivity {
             RecordsActivity.Info.driverStation = 2;
         } else if (red3.isChecked()){
             RecordsActivity.Info.driverStation = 3;
+        } else {
+            RecordsActivity.Info.driverStation = 0;
         }
-        if (pos1.isChecked()){
-            RecordsActivity.Info.fieldPosition = 1;
-        } else if (pos2.isChecked()){
-            RecordsActivity.Info.fieldPosition = 2;
-        } else if (pos3.isChecked()){
-            RecordsActivity.Info.fieldPosition = 3;
-        } else if (pos4.isChecked()){
-            RecordsActivity.Info.fieldPosition = 4;
+        switch (checkedPosition){
+            case 0:
+                RecordsActivity.Info.fieldPosition = 1;
+                break;
+            case 1:
+                RecordsActivity.Info.fieldPosition = 2;
+                break;
+            case 2:
+                RecordsActivity.Info.fieldPosition = 3;
+                break;
+            case 3:
+                RecordsActivity.Info.fieldPosition = 4;
+                break;
+            default:
+                RecordsActivity.Info.fieldPosition = 0;
+                break;
+
         }
     }
 }
