@@ -59,17 +59,33 @@ public class MainActivity extends AppCompatActivity {
                 pos4.setChecked(false);
         }
     }
+
+    /**
+     * Moves the xml/page to the auto one
+     *
+     * @param view Makes the method viewable to the xml and allows you to assign a button to the method
+     */
     public void toAuto(View view){
         Intent next = new Intent(this, AutoActivity.class);
         startActivity(next);
         saveData();
     }
+
+    /**
+     * Clears all the field positions
+     */
     private void clearPositions(){
         pos1.setChecked(false);
         pos2.setChecked(false);
         pos3.setChecked(false);
         pos4.setChecked(false);
     }
+
+    /**
+     * Acts as a radio group by only allowing you to select one radio button
+     *
+     * @param view Makes the method viewable to the xml and allows you to assign a button to the method
+     */
     public void clicked(View view) {
         for(int i = 0; i < positions.length;i++) {
             if(positions[i].isChecked()) {
@@ -82,6 +98,10 @@ public class MainActivity extends AppCompatActivity {
         clearPositions();
         positions[checkedPosition].setChecked(true);
     }
+
+    /**
+     * Stores all current data in RecordsActivity
+     */
     public void saveData(){
         RecordsActivity.Info.scoutName = scoutName.getText().toString();
         RecordsActivity.Info.matchNumber = matchNumber.getText().toString();
