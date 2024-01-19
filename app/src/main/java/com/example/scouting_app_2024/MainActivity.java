@@ -28,6 +28,51 @@ public class MainActivity extends AppCompatActivity {
         pos3 = findViewById(R.id.fieldPositionThree);
         pos4 = findViewById(R.id.fieldPositionFour);
         positions = new RadioButton[]{pos1,pos2,pos3,pos4};
+        setPrevious();
+    }
+
+    /**
+     * Moves the xml/page to auto
+     *
+     * @param view Makes the method viewable to the xml and allows you to assign the method to a button
+     */
+    public void toAuto(View view){
+        Intent next = new Intent(this, AutoActivity.class);
+        startActivity(next);
+        saveData();
+    }
+
+    /**
+     * Clears all the field positions
+     */
+    private void clearPositions(){
+        for(RadioButton pos: positions){
+            pos.setChecked(false);
+        }
+    }
+
+    /**
+     * Acts as a radio group by only allowing you to select one radio button
+     *
+     * @param view Makes the method viewable to the xml and allows you to assign the method to a button
+     */
+    public void clicked(View view) {
+        for(int i = 0; i < positions.length;i++) {
+            if(positions[i].isChecked()) {
+                if(checkedPosition != i) {
+                    checkedPosition = i;
+                    break;
+                }
+            }
+        }
+        clearPositions();
+        positions[checkedPosition].setChecked(true);
+    }
+
+    /**
+     * Sets all values to the ones in RecordsActivity so pages don't change whenever you switch between them
+     */
+    public void setPrevious(){
         scoutName.setText(RecordsActivity.Info.scoutName);
         matchNumber.setText(RecordsActivity.Info.matchNumber);
         teamNumber.setText(RecordsActivity.Info.teamNumber);
@@ -62,51 +107,9 @@ public class MainActivity extends AppCompatActivity {
                 pos4.setChecked(true);
                 break;
             default:
-                pos1.setChecked(false);
-                pos2.setChecked(false);
-                pos3.setChecked(false);
-                pos4.setChecked(false);
+                clearPositions();
                 break;
         }
-    }
-
-    /**
-     * Moves the xml/page to the auto one
-     *
-     * @param view Makes the method viewable to the xml and allows you to assign a button to the method
-     */
-    public void toAuto(View view){
-        Intent next = new Intent(this, AutoActivity.class);
-        startActivity(next);
-        saveData();
-    }
-
-    /**
-     * Clears all the field positions
-     */
-    private void clearPositions(){
-        pos1.setChecked(false);
-        pos2.setChecked(false);
-        pos3.setChecked(false);
-        pos4.setChecked(false);
-    }
-
-    /**
-     * Acts as a radio group by only allowing you to select one radio button
-     *
-     * @param view Makes the method viewable to the xml and allows you to assign a button to the method
-     */
-    public void clicked(View view) {
-        for(int i = 0; i < positions.length;i++) {
-            if(positions[i].isChecked()) {
-                if(checkedPosition != i) {
-                    checkedPosition = i;
-                    break;
-                }
-            }
-        }
-        clearPositions();
-        positions[checkedPosition].setChecked(true);
     }
 
     /**

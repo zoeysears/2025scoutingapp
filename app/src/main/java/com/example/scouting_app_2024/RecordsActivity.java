@@ -4,10 +4,15 @@ public class RecordsActivity {
     public static class Info {
         //main activity
         public static String scoutName = "";
-        public static String matchNumber = "";
+        public static String matchNumber = ""; //could possibly set this to a byte value to save QR space
         public static String teamNumber = "";
         public static byte driverStation = 0;
         public static byte fieldPosition = 0;
-
+        //auto activity
+        public static boolean leave = false;
+        public static byte autoNotes = 0;
+        public static byte autoAmpNotes = 0;
+        public static byte autoSpeakerNotes = 0;
+        public static String autoComments = "";
     }
 }
