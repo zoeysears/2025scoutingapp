@@ -133,4 +133,52 @@
         android:text="-"
         tools:layout_editor_absoluteX="175dp"
         tools:layout_editor_absoluteY="387dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="faced defense"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="533dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="played defense"
+        tools:layout_editor_absoluteX="247dp"
+        tools:layout_editor_absoluteY="533dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="died"
+        tools:layout_editor_absoluteX="430dp"
+        tools:layout_editor_absoluteY="533dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fell over"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="601dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="amp scoring"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="597dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="speaker scoring"
+        tools:layout_editor_absoluteX="415dp"
+        tools:layout_editor_absoluteY="596dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
