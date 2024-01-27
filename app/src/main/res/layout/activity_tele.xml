@@ -20,9 +20,11 @@
         android:id="@+id/teleBackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:onClick="backAuto"
         android:text="Back"
+        android:textSize="48sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,155 +32,223 @@
         android:id="@+id/teleNextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="toStage"
         android:text="Next"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/teleNotesTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="144dp"
         android:text="notes"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/teleNotesCountTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
         android:text="0"
-        tools:layout_editor_absoluteX="296dp"
-        tools:layout_editor_absoluteY="193dp" />
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/teleNotesIncrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:onClick="teleIncrementNotes"
         android:text="+"
-        tools:layout_editor_absoluteX="342dp"
-        tools:layout_editor_absoluteY="181dp" />
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/teleNotesCountTextView"
+        app:layout_constraintStart_toEndOf="@+id/teleNotesCountTextView"
+        app:layout_constraintTop_toTopOf="@+id/teleNotesCountTextView" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/teleNotesDecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
+        android:onClick="teleDecrementNotes"
         android:text="-"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="181dp" />
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/teleNotesCountTextView"
+        app:layout_constraintEnd_toStartOf="@+id/teleNotesCountTextView"
+        app:layout_constraintTop_toTopOf="@+id/teleNotesCountTextView" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/teleAmpNotesTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="amp notes"
-        tools:layout_editor_absoluteX="275dp"
-        tools:layout_editor_absoluteY="253dp" />
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teleNotesCountTextView" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/teleAmpNotesCountTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="284dp"
         android:text="0"
-        tools:layout_editor_absoluteX="304dp"
-        tools:layout_editor_absoluteY="295dp" />
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/teleAmpNotesIncrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:onClick="teleIncrementAmpNotes"
         android:text="+"
-        tools:layout_editor_absoluteX="342dp"
-        tools:layout_editor_absoluteY="280dp" />
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/teleAmpNotesCountTextView"
+        app:layout_constraintStart_toEndOf="@+id/teleAmpNotesCountTextView"
+        app:layout_constraintTop_toTopOf="@+id/teleAmpNotesCountTextView" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/teleAmpNotesDecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
+        android:onClick="teleDecrementAmpNotes"
         android:text="-"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="276dp" />
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/teleAmpNotesCountTextView"
+        app:layout_constraintEnd_toStartOf="@+id/teleAmpNotesCountTextView"
+        app:layout_constraintTop_toTopOf="@+id/teleAmpNotesCountTextView" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/teleSpeakerNotesTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:text="speaker notes"
-        tools:layout_editor_absoluteX="261dp"
-        tools:layout_editor_absoluteY="349dp" />
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teleAmpNotesCountTextView" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/teleSpeakerNotesCountTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="392dp"
         android:text="0"
-        tools:layout_editor_absoluteX="310dp"
-        tools:layout_editor_absoluteY="387dp" />
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/teleSpeakerNotesIncrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:onClick="teleIncrementSpeakerNotes"
         android:text="+"
-        tools:layout_editor_absoluteX="345dp"
-        tools:layout_editor_absoluteY="380dp" />
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/teleSpeakerNotesCountTextView"
+        app:layout_constraintStart_toEndOf="@+id/teleSpeakerNotesCountTextView"
+        app:layout_constraintTop_toTopOf="@+id/teleSpeakerNotesCountTextView" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/teleSpeakerNotesDecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
+        android:onClick="teleDecrementSpeakerNotes"
         android:text="-"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="387dp" />
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/teleSpeakerNotesCountTextView"
+        app:layout_constraintEnd_toStartOf="@+id/teleSpeakerNotesCountTextView"
+        app:layout_constraintTop_toTopOf="@+id/teleSpeakerNotesCountTextView" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/playedDefenseCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="faced defense"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="533dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="532dp"
         android:text="played defense"
-        tools:layout_editor_absoluteX="247dp"
-        tools:layout_editor_absoluteY="533dp" />
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/fellOverCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="died"
-        tools:layout_editor_absoluteX="430dp"
-        tools:layout_editor_absoluteY="533dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:text="fell over"
-        tools:layout_editor_absoluteX="93dp"
-        tools:layout_editor_absoluteY="601dp" />
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/playedDefenseCheckBox"
+        app:layout_constraintTop_toTopOf="@+id/playedDefenseCheckBox" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/speakerScoringCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="amp scoring"
-        tools:layout_editor_absoluteX="256dp"
-        tools:layout_editor_absoluteY="597dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:text="speaker scoring"
-        tools:layout_editor_absoluteX="415dp"
-        tools:layout_editor_absoluteY="596dp" />
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/fellOverCheckBox"
+        app:layout_constraintTop_toTopOf="@+id/fellOverCheckBox" />
+
+    <CheckBox
+        android:id="@+id/facedDefenseCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="faced defense"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/playedDefenseCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/playedDefenseCheckBox" />
+
+    <CheckBox
+        android:id="@+id/diedCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="died"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/fellOverCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/fellOverCheckBox" />
+
+    <CheckBox
+        android:id="@+id/ampScoringCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="amp scoring"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/speakerScoringCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/speakerScoringCheckBox" />
+
+    <EditText
+        android:id="@+id/teleCommentsEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Comments"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teleSpeakerNotesCountTextView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
