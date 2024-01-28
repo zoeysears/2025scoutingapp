@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/stageTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
@@ -17,66 +17,74 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/stageNextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
         android:text="Next"
+        android:onClick="toPopup"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/stageBackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
         android:text="Back"
+        android:onClick="backTele"
         android:textSize="48sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/stageCommentsEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="676dp"
         android:ems="10"
         android:hint="Comments"
         android:inputType="text"
-        tools:layout_editor_absoluteX="192dp"
-        tools:layout_editor_absoluteY="673dp" />
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
+        android:id="@+id/stageRadioGroup"
         android:layout_width="485dp"
         android:layout_height="324dp"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="159dp">
+        android:layout_marginTop="175dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/stageRadioTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Stage"
             android:textSize="96sp" />
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/parkRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Park"
             android:textSize="48sp" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/onstageRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Onstage"
             android:textSize="48sp" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/spotlitRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Spotlit"
@@ -84,20 +92,24 @@
     </RadioGroup>
 
     <CheckBox
-        android:id="@+id/checkBox7"
+        android:id="@+id/harmonyCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="550dp"
         android:text="Harmony"
         android:textSize="48sp"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="564dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/checkBox8"
+        android:id="@+id/trapCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="100dp"
         android:text="Trap"
         android:textSize="48sp"
-        tools:layout_editor_absoluteX="380dp"
-        tools:layout_editor_absoluteY="564dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

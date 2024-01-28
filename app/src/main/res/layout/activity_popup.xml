@@ -1,30 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/popupNextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="548dp"
+        android:layout_marginEnd="68dp"
         android:text="Yes"
-        tools:layout_editor_absoluteX="439dp"
-        tools:layout_editor_absoluteY="528dp" />
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/popupBackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="548dp"
         android:text="NO"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="528dp" />
+        android:onClick="backStage"
+        android:textSize="60sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/popupTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="YOU CANNOT GO BACK AFTER FINALIZING, COUNTINUE?"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="471dp" />
+        android:layout_marginTop="388dp"
+        android:gravity="center"
+        android:text="You cannot go back after finalizing, continue?"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
