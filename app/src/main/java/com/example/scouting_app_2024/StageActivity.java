@@ -33,18 +33,18 @@ public class StageActivity extends AppCompatActivity {
     public void backTele(View view){
         Intent next = new Intent(this, TeleActivity.class);
         startActivity(next);
-        //saveData();
+        saveData();
     }
 
     /**
-     * Moves the xml/page to tele
+     * Moves the xml/page to popup
      *
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
     public void toPopup(View view){
         Intent next = new Intent(this, PopupActivity.class);
         startActivity(next);
-        //saveData();
+        saveData();
     }
 
     /**
@@ -53,24 +53,40 @@ public class StageActivity extends AppCompatActivity {
     public void setPrevious(){
         harmonyCheck.setChecked(RecordsActivity.Info.harmony);
         trapCheck.setChecked(RecordsActivity.Info.trap);
-        //leaveCheck.setChecked(RecordsActivity.Info.leave);
-        //autoNotesCount = RecordsActivity.Info.autoNotes;
-        //autoNotesCountText.setText(String.valueOf(autoNotesCount));
-        //autoAmpNotesCount = RecordsActivity.Info.autoAmpNotes;
-        //autoAmpNotesCountText.setText(String.valueOf(autoAmpNotesCount));
-        //autoSpeakerNotesCount = RecordsActivity.Info.autoSpeakerNotes;
-        //autoSpeakerNotesCountText.setText(String.valueOf(autoSpeakerNotesCount));
-        //comments.setText(RecordsActivity.Info.autoComments);
+        switch (RecordsActivity.Info.stageLevel) {
+            case 1:
+                park.setChecked(true);
+                break;
+            case 2:
+                onstage.setChecked(true);
+                break;
+            case 3:
+                spotlit.setChecked(true);
+                break;
+            default:
+                park.setChecked(false);
+                onstage.setChecked(false);
+                spotlit.setChecked(false);
+                break;
+        }
+        stageComments.setText(RecordsActivity.Info.stageComments);
     }
 
     /**
      * Stores all current data in RecordsActivity
      */
     public void saveData(){
-        //RecordsActivity.Info.leave = leaveCheck.isChecked();
-        //RecordsActivity.Info.autoNotes = autoNotesCount;
-        //RecordsActivity.Info.autoAmpNotes = autoAmpNotesCount;
-        //RecordsActivity.Info.autoSpeakerNotes = autoSpeakerNotesCount;
-        //RecordsActivity.Info.autoComments = comments.getText().toString();
+        RecordsActivity.Info.harmony = harmonyCheck.isChecked();
+        RecordsActivity.Info.trap = trapCheck.isChecked();
+        if(park.isChecked()){
+            RecordsActivity.Info.driverStation = 1;
+        } else if (onstage.isChecked()){
+            RecordsActivity.Info.driverStation = 2;
+        } else if (spotlit.isChecked()){
+            RecordsActivity.Info.driverStation = 3;
+        } else {
+            RecordsActivity.Info.driverStation = 0;
+        }
+        RecordsActivity.Info.stageComments = stageComments.getText().toString();
     }
 }

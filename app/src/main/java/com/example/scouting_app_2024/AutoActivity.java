@@ -13,6 +13,7 @@ public class AutoActivity extends AppCompatActivity {
     CheckBox leaveCheck;
     TextView autoNotesCountText, autoAmpNotesCountText, autoSpeakerNotesCountText;
     byte autoNotesCount, autoAmpNotesCount, autoSpeakerNotesCount;
+    int autoTotalNotes;
     EditText autoComments;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class AutoActivity extends AppCompatActivity {
      */
     public void autoIncrementNotes(View view){
         autoNotesCount++;
+        autoTotalNotes++;
         autoNotesCountText.setText(String.valueOf(autoNotesCount));
     }
 
@@ -42,8 +44,9 @@ public class AutoActivity extends AppCompatActivity {
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
     public void autoDecrementNotes(View view){
-        if (autoNotesCount != 0){
+        if (autoNotesCount != 0 && autoAmpNotesCount+autoSpeakerNotesCount<autoTotalNotes){
             autoNotesCount--;
+            autoTotalNotes--;
             autoNotesCountText.setText(String.valueOf(autoNotesCount));
         }
     }
@@ -54,8 +57,10 @@ public class AutoActivity extends AppCompatActivity {
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
     public void autoIncrementAmpNotes(View view){
-        autoAmpNotesCount++;
-        autoAmpNotesCountText.setText(String.valueOf(autoAmpNotesCount));
+        if (autoAmpNotesCount+autoSpeakerNotesCount<autoTotalNotes){
+            autoAmpNotesCount++;
+            autoAmpNotesCountText.setText(String.valueOf(autoAmpNotesCount));
+        }
     }
 
     /**
@@ -76,8 +81,10 @@ public class AutoActivity extends AppCompatActivity {
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
     public void autoIncrementSpeakerNotes(View view){
-        autoSpeakerNotesCount++;
-        autoSpeakerNotesCountText.setText(String.valueOf(autoSpeakerNotesCount));
+        if (autoAmpNotesCount+autoSpeakerNotesCount<autoTotalNotes) {
+            autoSpeakerNotesCount++;
+            autoSpeakerNotesCountText.setText(String.valueOf(autoSpeakerNotesCount));
+        }
     }
 
     /**
