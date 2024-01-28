@@ -123,7 +123,7 @@ public class TeleActivity extends AppCompatActivity {
     /**
      * Sets all values to the ones in RecordsActivity so pages don't change whenever you switch between them
      */
-   /* public void setPrevious(){
+    /*public void setPrevious(){
         leaveCheck.setChecked(RecordsActivity.Info.leave);
         teleNotesCount = RecordsActivity.Info.teleNotes;
         teleNotesCountText.setText(String.valueOf(teleNotesCount));
@@ -132,7 +132,7 @@ public class TeleActivity extends AppCompatActivity {
         teleSpeakerNotesCount = RecordsActivity.Info.teleSpeakerNotes;
         teleSpeakerNotesCountText.setText(String.valueOf(teleSpeakerNotesCount));
         comments.setText(RecordsActivity.Info.teleComments);
-    }
+    }*/
 
     /**
      * Stores all current data in RecordsActivity
@@ -143,9 +143,6 @@ public class TeleActivity extends AppCompatActivity {
         RecordsActivity.Info.teleAmpNotes = teleAmpNotesCount;
         RecordsActivity.Info.teleSpeakerNotes = teleSpeakerNotesCount;
         RecordsActivity.Info.teleComments = comments.getText().toString();
-    }
-
+    }*/
 }
 
-*/
-}

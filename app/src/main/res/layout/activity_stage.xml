@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -8,25 +9,34 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stage"
-        tools:layout_editor_absoluteX="271dp"
-        tools:layout_editor_absoluteY="60dp" />
+        android:layout_marginTop="68dp"
+        android:text="STAGE"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
         android:text="Next"
-        tools:layout_editor_absoluteX="438dp"
-        tools:layout_editor_absoluteY="36dp" />
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
         android:text="Back"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="36dp" />
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextText2"
@@ -39,49 +49,55 @@
         tools:layout_editor_absoluteY="673dp" />
 
     <RadioGroup
-        android:layout_width="278dp"
-        android:layout_height="197dp"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="172dp">
+        android:layout_width="485dp"
+        android:layout_height="324dp"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="159dp">
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Stage" />
+            android:text="Stage"
+            android:textSize="96sp" />
 
         <RadioButton
             android:id="@+id/radioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Park" />
+            android:text="Park"
+            android:textSize="48sp" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Onstage" />
+            android:text="Onstage"
+            android:textSize="48sp" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Spotlit" />
+            android:text="Spotlit"
+            android:textSize="48sp" />
     </RadioGroup>
 
     <CheckBox
         android:id="@+id/checkBox7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="harmony"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="456dp" />
+        android:text="Harmony"
+        android:textSize="48sp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="564dp" />
 
     <CheckBox
         android:id="@+id/checkBox8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="trap"
-        tools:layout_editor_absoluteX="359dp"
-        tools:layout_editor_absoluteY="449dp" />
+        android:text="Trap"
+        android:textSize="48sp"
+        tools:layout_editor_absoluteX="380dp"
+        tools:layout_editor_absoluteY="564dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
