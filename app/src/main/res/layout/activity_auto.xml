@@ -179,10 +179,10 @@
         app:layout_constraintTop_toTopOf="@+id/autoSpeakerNotesCountTextView" />
 
     <EditText
-        android:id="@+id/autoCommentEditText"
+        android:id="@+id/autoCommentsEditText"
         android:layout_width="506dp"
         android:layout_height="76dp"
-        android:layout_marginTop="750dp"
+        android:layout_marginTop="748dp"
         android:ems="10"
         android:hint="Comments (missed pieces, hitting other robots, incorrect auto, etc)"
         android:inputType="text"

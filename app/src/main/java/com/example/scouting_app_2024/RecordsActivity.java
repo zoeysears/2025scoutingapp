@@ -14,5 +14,10 @@ public class RecordsActivity {
         public static byte autoAmpNotes = 0;
         public static byte autoSpeakerNotes = 0;
         public static String autoComments = "";
+        //stage activity
+        public static byte stageLevel = 0;
+        public static boolean harmony = false;
+        public static boolean trap = false;
+        public static String stageComments = "";
     }
 }

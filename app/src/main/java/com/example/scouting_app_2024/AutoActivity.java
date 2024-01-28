@@ -2,7 +2,6 @@ package com.example.scouting_app_2024;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -14,7 +13,7 @@ public class AutoActivity extends AppCompatActivity {
     CheckBox leaveCheck;
     TextView autoNotesCountText, autoAmpNotesCountText, autoSpeakerNotesCountText;
     byte autoNotesCount, autoAmpNotesCount, autoSpeakerNotesCount;
-    EditText comments;
+    EditText autoComments;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +22,7 @@ public class AutoActivity extends AppCompatActivity {
         autoNotesCountText = findViewById(R.id.autoNotesCountTextView);
         autoAmpNotesCountText = findViewById(R.id.autoAmpNotesCountTextView);
         autoSpeakerNotesCountText = findViewById(R.id.autoSpeakerNotesCountTextView);
-        comments = findViewById(R.id.autoCommentEditText);
+        autoComments = findViewById(R.id.autoCommentsEditText);
         setPrevious();
     }
 
@@ -126,7 +125,7 @@ public class AutoActivity extends AppCompatActivity {
         autoAmpNotesCountText.setText(String.valueOf(autoAmpNotesCount));
         autoSpeakerNotesCount = RecordsActivity.Info.autoSpeakerNotes;
         autoSpeakerNotesCountText.setText(String.valueOf(autoSpeakerNotesCount));
-        comments.setText(RecordsActivity.Info.autoComments);
+        autoComments.setText(RecordsActivity.Info.autoComments);
     }
 
     /**
@@ -137,6 +136,6 @@ public class AutoActivity extends AppCompatActivity {
         RecordsActivity.Info.autoNotes = autoNotesCount;
         RecordsActivity.Info.autoAmpNotes = autoAmpNotesCount;
         RecordsActivity.Info.autoSpeakerNotes = autoSpeakerNotesCount;
-        RecordsActivity.Info.autoComments = comments.getText().toString();
+        RecordsActivity.Info.autoComments = autoComments.getText().toString();
     }
 }
