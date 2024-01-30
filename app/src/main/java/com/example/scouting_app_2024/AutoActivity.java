@@ -13,8 +13,8 @@ public class AutoActivity extends AppCompatActivity {
     CheckBox leaveCheck;
     TextView autoNotesCountText, autoAmpNotesCountText, autoSpeakerNotesCountText;
     byte autoNotesCount, autoAmpNotesCount, autoSpeakerNotesCount;
-    int autoTotalNotes;
     EditText autoComments;
+    //Because you can start with a note, you're off by one in your count
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +34,6 @@ public class AutoActivity extends AppCompatActivity {
      */
     public void autoIncrementNotes(View view){
         autoNotesCount++;
-        autoTotalNotes++;
         autoNotesCountText.setText(String.valueOf(autoNotesCount));
     }
 
@@ -44,9 +43,8 @@ public class AutoActivity extends AppCompatActivity {
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
     public void autoDecrementNotes(View view){
-        if (autoNotesCount != 0 && autoAmpNotesCount+autoSpeakerNotesCount<autoTotalNotes){
+        if (autoNotesCount != 0 && autoAmpNotesCount+autoSpeakerNotesCount<autoNotesCount){
             autoNotesCount--;
-            autoTotalNotes--;
             autoNotesCountText.setText(String.valueOf(autoNotesCount));
         }
     }
@@ -57,7 +55,7 @@ public class AutoActivity extends AppCompatActivity {
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
     public void autoIncrementAmpNotes(View view){
-        if (autoAmpNotesCount+autoSpeakerNotesCount<autoTotalNotes){
+        if (autoAmpNotesCount+autoSpeakerNotesCount<autoNotesCount){
             autoAmpNotesCount++;
             autoAmpNotesCountText.setText(String.valueOf(autoAmpNotesCount));
         }
@@ -81,7 +79,7 @@ public class AutoActivity extends AppCompatActivity {
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
     public void autoIncrementSpeakerNotes(View view){
-        if (autoAmpNotesCount+autoSpeakerNotesCount<autoTotalNotes) {
+        if (autoAmpNotesCount+autoSpeakerNotesCount<autoNotesCount) {
             autoSpeakerNotesCount++;
             autoSpeakerNotesCountText.setText(String.valueOf(autoSpeakerNotesCount));
         }

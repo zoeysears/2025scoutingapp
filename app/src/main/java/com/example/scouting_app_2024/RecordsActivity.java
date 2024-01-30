@@ -14,6 +14,17 @@ public class RecordsActivity {
         public static byte autoAmpNotes = 0;
         public static byte autoSpeakerNotes = 0;
         public static String autoComments = "";
+        //tele activity
+        public static int teleNotes = 0;
+        public static int teleAmpNotes = 0;
+        public static int teleSpeakerNotes = 0;
+        public static String teleComments = "";
+        public static boolean playedDefense = false;
+        public static boolean facedDefense = false;
+        public static boolean fellOver = false;
+        public static boolean died = false;
+        public static boolean ampScoring = false;
+        public static boolean speakerScoring = false;
         //stage activity
         public static byte stageLevel = 0;
         public static boolean harmony = false;

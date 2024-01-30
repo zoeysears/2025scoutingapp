@@ -13,6 +13,7 @@ public class StageActivity extends AppCompatActivity {
     CheckBox harmonyCheck, trapCheck;
     RadioButton park, onstage, spotlit;
     EditText stageComments;
+    //Cannot deselect parking options in endgame
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

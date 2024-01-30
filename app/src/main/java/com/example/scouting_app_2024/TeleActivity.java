@@ -29,8 +29,7 @@ public class TeleActivity extends AppCompatActivity {
         teleAmpNotesCountText = findViewById(R.id.teleAmpNotesCountTextView);
         teleSpeakerNotesCountText = findViewById(R.id.teleSpeakerNotesCountTextView);
         teleComments = findViewById(R.id.teleCommentsEditText);
-
-
+        setPrevious();
     }
     /**
      * Increments the notes count and updates the text
@@ -48,7 +47,7 @@ public class TeleActivity extends AppCompatActivity {
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
     public void teleDecrementNotes(View view){
-        if (teleNotesCount != 0){
+        if (teleNotesCount != 0 && teleSpeakerNotesCount + teleAmpNotesCount < teleNotesCount){
             teleNotesCount--;
             teleNotesCountText.setText(String.valueOf(teleNotesCount));
         }
@@ -60,8 +59,10 @@ public class TeleActivity extends AppCompatActivity {
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
     public void teleIncrementAmpNotes(View view){
-        teleAmpNotesCount++;
-        teleAmpNotesCountText.setText(String.valueOf(teleAmpNotesCount));
+        if (teleAmpNotesCount + teleSpeakerNotesCount < teleNotesCount){
+            teleAmpNotesCount++;
+            teleAmpNotesCountText.setText(String.valueOf(teleAmpNotesCount));  
+        }
     }
 
     /**
@@ -82,8 +83,10 @@ public class TeleActivity extends AppCompatActivity {
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
     public void teleIncrementSpeakerNotes(View view){
-        teleSpeakerNotesCount++;
-        teleSpeakerNotesCountText.setText(String.valueOf(teleSpeakerNotesCount));
+        if (teleAmpNotesCount + teleSpeakerNotesCount < teleNotesCount){
+            teleSpeakerNotesCount++;
+            teleSpeakerNotesCountText.setText(String.valueOf(teleSpeakerNotesCount));  
+        }
     }
 
     /**
@@ -106,7 +109,7 @@ public class TeleActivity extends AppCompatActivity {
     public void backAuto(View view){
         Intent next = new Intent(this, AutoActivity.class);
         startActivity(next);
-        //saveData();
+        saveData();
     }
 
     /**
@@ -117,32 +120,42 @@ public class TeleActivity extends AppCompatActivity {
     public void toStage(View view){
         Intent next = new Intent(this, StageActivity.class);
         startActivity(next);
-        //saveData();
+        saveData();
     }
 
     /**
      * Sets all values to the ones in RecordsActivity so pages don't change whenever you switch between them
      */
-    /*public void setPrevious(){
-        leaveCheck.setChecked(RecordsActivity.Info.leave);
+    public void setPrevious(){
+        facedDefenseCheck.setChecked(RecordsActivity.Info.facedDefense);
+        playedDefenseCheck.setChecked(RecordsActivity.Info.playedDefense);
+        diedCheck.setChecked(RecordsActivity.Info.died);
+        fellOverCheck.setChecked(RecordsActivity.Info.fellOver);
+        ampScoringCheck.setChecked(RecordsActivity.Info.ampScoring);
+        speakerScoringCheck.setChecked(RecordsActivity.Info.speakerScoring);
         teleNotesCount = RecordsActivity.Info.teleNotes;
         teleNotesCountText.setText(String.valueOf(teleNotesCount));
         teleAmpNotesCount = RecordsActivity.Info.teleAmpNotes;
         teleAmpNotesCountText.setText(String.valueOf(teleAmpNotesCount));
         teleSpeakerNotesCount = RecordsActivity.Info.teleSpeakerNotes;
         teleSpeakerNotesCountText.setText(String.valueOf(teleSpeakerNotesCount));
-        comments.setText(RecordsActivity.Info.teleComments);
-    }*/
+        teleComments.setText(RecordsActivity.Info.teleComments);
+    }
 
     /**
      * Stores all current data in RecordsActivity
      */
-    /*public void saveData(){
-        RecordsActivity.Info.leave = leaveCheck.isChecked();
+    public void saveData(){
+        RecordsActivity.Info.facedDefense = facedDefenseCheck.isChecked();
+        RecordsActivity.Info.playedDefense = playedDefenseCheck.isChecked();
+        RecordsActivity.Info.died = diedCheck.isChecked();
+        RecordsActivity.Info.fellOver = fellOverCheck.isChecked();
+        RecordsActivity.Info.speakerScoring = speakerScoringCheck.isChecked();
+        RecordsActivity.Info.ampScoring = ampScoringCheck.isChecked();
         RecordsActivity.Info.teleNotes = teleNotesCount;
         RecordsActivity.Info.teleAmpNotes = teleAmpNotesCount;
         RecordsActivity.Info.teleSpeakerNotes = teleSpeakerNotesCount;
-        RecordsActivity.Info.teleComments = comments.getText().toString();
-    }*/
+        RecordsActivity.Info.teleComments = teleComments.getText().toString();
+    }
 }
 
