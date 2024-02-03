@@ -6,18 +6,15 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class PopupActivity extends AppCompatActivity {
+public class QrActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_popup);
+        setContentView(R.layout.activity_qr);
     }
-    public void backStage(View view){
-        Intent next = new Intent(this, StageActivity.class);
+    public void toMain(View view){
+        Intent next = new Intent(this, MainActivity.class);
         startActivity(next);
-    }
-    public void toQr(View view){
-        Intent next = new Intent(this, QrActivity.class);
-        startActivity(next);
+        RecordsActivity.Info.clear();
     }
 }

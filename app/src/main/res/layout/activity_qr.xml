@@ -5,40 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/popupNextButton"
+    <TextView
+        android:id="@+id/scanQrTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="548dp"
-        android:layout_marginEnd="68dp"
-        android:onClick="toQr"
-        android:text="Yes"
+        android:layout_marginTop="200dp"
+        android:text="Scan QR Code"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/popupBackButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="548dp"
-        android:text="NO"
-        android:onClick="backStage"
-        android:textSize="60sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/popupTextView"
+    <Button
+        android:id="@+id/finishButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="388dp"
-        android:gravity="center"
-        android:text="You cannot go back after finalizing, continue?"
-        android:textSize="48sp"
+        android:layout_marginTop="712dp"
+        android:onClick="toMain"
+        android:text="FINISH"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

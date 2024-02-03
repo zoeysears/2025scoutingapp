@@ -30,5 +30,9 @@ public class RecordsActivity {
         public static boolean harmony = false;
         public static boolean trap = false;
         public static String stageComments = "";
+
+        public static void clear(){
+
+        }
     }
 }
