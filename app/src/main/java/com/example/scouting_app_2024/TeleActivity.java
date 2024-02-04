@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class TeleActivity extends AppCompatActivity {
     CheckBox playedDefenseCheck, facedDefenseCheck, fellOverCheck, diedCheck, ampScoringCheck, speakerScoringCheck;
     TextView teleNotesCountText, teleAmpNotesCountText, teleSpeakerNotesCountText;
-    int teleNotesCount, teleAmpNotesCount, teleSpeakerNotesCount;
+    byte teleNotesCount, teleAmpNotesCount, teleSpeakerNotesCount;
     EditText teleComments;
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -31,6 +31,7 @@ public class TeleActivity extends AppCompatActivity {
         teleComments = findViewById(R.id.teleCommentsEditText);
         setPrevious();
     }
+
     /**
      * Increments the notes count and updates the text
      *
@@ -102,7 +103,7 @@ public class TeleActivity extends AppCompatActivity {
     }
 
     /**
-     * Moves the xml/page back to main
+     * Moves the xml/page back to auto
      *
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
@@ -113,7 +114,7 @@ public class TeleActivity extends AppCompatActivity {
     }
 
     /**
-     * Moves the xml/page to tele
+     * Moves the xml/page to stage
      *
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */

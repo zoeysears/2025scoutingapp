@@ -26,6 +26,7 @@ public class StageActivity extends AppCompatActivity {
         stageComments = findViewById(R.id.stageCommentsEditText);
         setPrevious();
     }
+
     /**
      * Moves the xml/page back to tele
      *
@@ -80,13 +81,13 @@ public class StageActivity extends AppCompatActivity {
         RecordsActivity.Info.harmony = harmonyCheck.isChecked();
         RecordsActivity.Info.trap = trapCheck.isChecked();
         if(park.isChecked()){
-            RecordsActivity.Info.driverStation = 1;
+            RecordsActivity.Info.stageLevel = 1;
         } else if (onstage.isChecked()){
-            RecordsActivity.Info.driverStation = 2;
+            RecordsActivity.Info.stageLevel = 2;
         } else if (spotlit.isChecked()){
-            RecordsActivity.Info.driverStation = 3;
+            RecordsActivity.Info.stageLevel = 3;
         } else {
-            RecordsActivity.Info.driverStation = 0;
+            RecordsActivity.Info.stageLevel = 0;
         }
         RecordsActivity.Info.stageComments = stageComments.getText().toString();
     }

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
-
+//for some reason when you switch between pages more than once the position resets
 public class MainActivity extends AppCompatActivity {
     EditText scoutName, matchNumber, teamNumber;
     RadioButton red1, red2, red3, pos1, pos2, pos3, pos4;

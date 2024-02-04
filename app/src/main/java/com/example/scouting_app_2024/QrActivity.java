@@ -11,7 +11,14 @@ public class QrActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr);
+        String json = RecordsActivity.Info.CreateJSON();
     }
+
+    /**
+     * Moves the xml/page to main
+     *
+     * @param view Makes the method viewable to the xml and allows you to assign the method to a button
+     */
     public void toMain(View view){
         Intent next = new Intent(this, MainActivity.class);
         startActivity(next);

@@ -14,7 +14,6 @@ public class AutoActivity extends AppCompatActivity {
     TextView autoNotesCountText, autoAmpNotesCountText, autoSpeakerNotesCountText;
     byte autoNotesCount, autoAmpNotesCount, autoSpeakerNotesCount;
     EditText autoComments;
-    //Because you can start with a note, you're off by one in your count
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +54,7 @@ public class AutoActivity extends AppCompatActivity {
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
     public void autoIncrementAmpNotes(View view){
-        if (autoAmpNotesCount+autoSpeakerNotesCount<autoNotesCount){
+        if (autoAmpNotesCount+autoSpeakerNotesCount<autoNotesCount+1){
             autoAmpNotesCount++;
             autoAmpNotesCountText.setText(String.valueOf(autoAmpNotesCount));
         }
@@ -79,7 +78,7 @@ public class AutoActivity extends AppCompatActivity {
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
     public void autoIncrementSpeakerNotes(View view){
-        if (autoAmpNotesCount+autoSpeakerNotesCount<autoNotesCount) {
+        if (autoAmpNotesCount+autoSpeakerNotesCount<autoNotesCount+1) {
             autoSpeakerNotesCount++;
             autoSpeakerNotesCountText.setText(String.valueOf(autoSpeakerNotesCount));
         }
