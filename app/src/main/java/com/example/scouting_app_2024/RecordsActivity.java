@@ -32,7 +32,33 @@ public class RecordsActivity {
         public static String stageComments = "";
 
         public static void clear(){
-
+            //main activity
+            matchNumber = Integer.toString(Integer.decode(matchNumber)+1); //could possibly set this to a byte value to save QR space
+            teamNumber = "";
+            driverStation = 0;
+            fieldPosition = 0;
+            //auto activity
+            leave = false;
+            autoNotes = 0;
+            autoAmpNotes = 0;
+            autoSpeakerNotes = 0;
+            autoComments = "";
+            //tele activity
+            teleNotes = 0;
+            teleAmpNotes = 0;
+            teleSpeakerNotes = 0;
+            teleComments = "";
+            playedDefense = false;
+            facedDefense = false;
+            fellOver = false;
+            died = false;
+            ampScoring = false;
+            speakerScoring = false;
+            //stage activity
+            stageLevel = 0;
+            harmony = false;
+            trap = false;
+            stageComments = "";
         }
     }
 }
