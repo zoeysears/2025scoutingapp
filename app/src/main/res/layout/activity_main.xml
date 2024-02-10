@@ -79,7 +79,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Red 1"
-
             android:background="@color/grey"
             android:textColor="@color/white"
             android:buttonTint="@color/yellow"
