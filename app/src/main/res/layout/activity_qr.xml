@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/darkGrey">
 
     <TextView
         android:id="@+id/scanQrTextView"
@@ -11,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         android:text="Scan QR Code"
+        android:textColor="@color/white"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,9 +22,11 @@
         android:id="@+id/finishButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="712dp"
+        android:layout_marginTop="700dp"
         android:onClick="toMain"
         android:text="FINISH"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/yellow"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

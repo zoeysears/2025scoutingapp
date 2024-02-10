@@ -3,16 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/darkGrey">
 
     <Button
         android:id="@+id/popupNextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="548dp"
-        android:layout_marginEnd="68dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="@color/yellow"
         android:onClick="toQr"
         android:text="Yes"
+        android:textColor="@color/white"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,6 +27,8 @@
         android:layout_marginStart="60dp"
         android:layout_marginTop="548dp"
         android:text="NO"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/yellow"
         android:onClick="backStage"
         android:textSize="60sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +41,7 @@
         android:layout_marginTop="388dp"
         android:gravity="center"
         android:text="You cannot go back after finalizing, continue?"
+        android:textColor="@color/white"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
