@@ -23,10 +23,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="700dp"
+        android:backgroundTint="@color/yellow"
         android:onClick="toMain"
         android:text="FINISH"
         android:textColor="@color/white"
-        android:backgroundTint="@color/yellow"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,11 +34,11 @@
 
     <ImageView
         android:id="@+id/qrImageView"
-        android:layout_width="241dp"
-        android:layout_height="513dp"
-        android:layout_marginTop="292dp"
+        android:layout_width="270dp"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toTopOf="@+id/finishButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scanQrTextView"
         app:srcCompat="@drawable/img_3430" />
 </androidx.constraintlayout.widget.ConstraintLayout>
