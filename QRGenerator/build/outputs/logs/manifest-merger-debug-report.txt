@@ -1,5 +1,6 @@
 -- Merging decision tree log ---
 manifest
+
 ADDED from C:\Users\Robot\Documents\GitHub\scoutingapp2024\QRGenerator\src\main\AndroidManifest.xml:2:1-4:12
 INJECTED from C:\Users\Robot\Documents\GitHub\scoutingapp2024\QRGenerator\src\main\AndroidManifest.xml:2:1-4:12
 	package
