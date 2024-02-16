@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class TeleActivity extends AppCompatActivity {
-    CheckBox playedDefenseCheck, facedDefenseCheck, fellOverCheck, diedCheck, ampScoringCheck, speakerScoringCheck;
     TextView teleNotesCountText, teleAmpNotesCountText, teleSpeakerNotesCountText;
     byte teleNotesCount, teleAmpNotesCount, teleSpeakerNotesCount;
     EditText teleComments;
@@ -19,12 +18,6 @@ public class TeleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tele);
-        playedDefenseCheck = findViewById(R.id.playedDefenseCheckBox);
-        facedDefenseCheck = findViewById(R.id.facedDefenseCheckBox);
-        fellOverCheck = findViewById(R.id.fellOverCheckBox);
-        diedCheck = findViewById(R.id.diedCheckBox);
-        ampScoringCheck = findViewById(R.id.ampScoringCheckBox);
-        speakerScoringCheck = findViewById(R.id.speakerScoringCheckBox);
         teleNotesCountText = findViewById(R.id.teleNotesCountTextView);
         teleAmpNotesCountText = findViewById(R.id.teleAmpNotesCountTextView);
         teleSpeakerNotesCountText = findViewById(R.id.teleSpeakerNotesCountTextView);
@@ -128,12 +121,6 @@ public class TeleActivity extends AppCompatActivity {
      * Sets all values to the ones in RecordsActivity so pages don't change whenever you switch between them
      */
     public void setPrevious(){
-        facedDefenseCheck.setChecked(RecordsActivity.Info.facedDefense);
-        playedDefenseCheck.setChecked(RecordsActivity.Info.playedDefense);
-        diedCheck.setChecked(RecordsActivity.Info.died);
-        fellOverCheck.setChecked(RecordsActivity.Info.fellOver);
-        ampScoringCheck.setChecked(RecordsActivity.Info.ampScoring);
-        speakerScoringCheck.setChecked(RecordsActivity.Info.speakerScoring);
         teleNotesCount = RecordsActivity.Info.teleNotes;
         teleNotesCountText.setText(String.valueOf(teleNotesCount));
         teleAmpNotesCount = RecordsActivity.Info.teleAmpNotes;
@@ -147,12 +134,6 @@ public class TeleActivity extends AppCompatActivity {
      * Stores all current data in RecordsActivity
      */
     public void saveData(){
-        RecordsActivity.Info.facedDefense = facedDefenseCheck.isChecked();
-        RecordsActivity.Info.playedDefense = playedDefenseCheck.isChecked();
-        RecordsActivity.Info.died = diedCheck.isChecked();
-        RecordsActivity.Info.fellOver = fellOverCheck.isChecked();
-        RecordsActivity.Info.speakerScoring = speakerScoringCheck.isChecked();
-        RecordsActivity.Info.ampScoring = ampScoringCheck.isChecked();
         RecordsActivity.Info.teleNotes = teleNotesCount;
         RecordsActivity.Info.teleAmpNotes = teleAmpNotesCount;
         RecordsActivity.Info.teleSpeakerNotes = teleSpeakerNotesCount;

@@ -6,6 +6,8 @@ public class RecordsActivity {
         public static String scoutName = "";
         public static String matchNumber = "";
         public static String teamNumber = "";
+
+        public static boolean preload = false;
         public static byte driverStation = 0;
         public static byte fieldPosition = 0;
         //auto activity
@@ -19,17 +21,16 @@ public class RecordsActivity {
         public static byte teleAmpNotes = 0;
         public static byte teleSpeakerNotes = 0;
         public static String teleComments = "";
-        public static boolean playedDefense = false;
-        public static boolean facedDefense = false;
-        public static boolean fellOver = false;
-        public static boolean died = false;
-        public static boolean ampScoring = false;
-        public static boolean speakerScoring = false;
         //stage activity
         public static byte stageLevel = 0;
         public static boolean harmony = false;
         public static boolean trap = false;
         public static String stageComments = "";
+
+        public static double test = 3.737546328;
+        public static double test1 = 0.7339546;
+        public static double test2 = .7339465;
+        public static double test3 = 3.7370837648723;
 
         /**
          * Turns a boolean into either a 1 or 0 for the JSON file
@@ -56,6 +57,7 @@ public class RecordsActivity {
             String json = String.format("{\"Name\": \"%s\",",scoutName);
             json += String.format("\"Match\": \"%s\",",matchNumber);
             json += String.format("\"Team\": \"%s\",",teamNumber);
+            json += String.format("\"Preload\": \"%d\",",printBoolean(preload));
             json += String.format("\"Station\": \"%s\",",driverStation);
             json += String.format("\"Pos\": \"%s\",",fieldPosition);
             //auto activity
@@ -68,13 +70,6 @@ public class RecordsActivity {
             json += String.format("\"TeleNote\": \"%s\",",teleNotes);
             json += String.format("\"TeleAmp\": \"%s\",",teleAmpNotes);
             json += String.format("\"TeleSpeaker\": \"%s\",",teleSpeakerNotes);
-            json += String.format("\"TeleComment\": \"%s\",",teleComments);
-            json += String.format("\"PlayedDefense\": \"%s\",",printBoolean(playedDefense));
-            json += String.format("\"FacedDefense\": \"%s\",",printBoolean(facedDefense));
-            json += String.format("\"FellOver\": \"%s\",",printBoolean(fellOver));
-            json += String.format("\"Died\": \"%s\",",printBoolean(died));
-            json += String.format("\"SpeakerScore\": \"%s\",",printBoolean(speakerScoring));
-            json += String.format("\"AmpScore\": \"%s\",",printBoolean(ampScoring));
             json += String.format("\"TeleComment\": \"%s\",",teleComments);
             //stage activity
             json += String.format("\"Stage\": \"%s\",",stageLevel);
@@ -91,6 +86,7 @@ public class RecordsActivity {
             //main activity
             matchNumber = Integer.toString(Integer.decode(matchNumber)+1);
             teamNumber = "";
+            preload = false;
             fieldPosition = 0;
             //auto activity
             leave = false;
@@ -103,12 +99,6 @@ public class RecordsActivity {
             teleAmpNotes = 0;
             teleSpeakerNotes = 0;
             teleComments = "";
-            playedDefense = false;
-            facedDefense = false;
-            fellOver = false;
-            died = false;
-            ampScoring = false;
-            speakerScoring = false;
             //stage activity
             stageLevel = 0;
             harmony = false;

@@ -202,92 +202,19 @@
         app:layout_constraintEnd_toStartOf="@+id/teleSpeakerNotesCountTextView"
         app:layout_constraintTop_toTopOf="@+id/teleSpeakerNotesCountTextView" />
 
-    <CheckBox
-        android:id="@+id/playedDefenseCheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="708dp"
-        android:buttonTint="@color/yellow"
-        android:text="Played Defense"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/fellOverCheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="Fell Over"
-        android:textColor="@color/white"
-        android:buttonTint="@color/yellow"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/playedDefenseCheckBox"
-        app:layout_constraintTop_toTopOf="@+id/playedDefenseCheckBox" />
-
-    <CheckBox
-        android:id="@+id/speakerScoringCheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="Speaker Scoring"
-        android:textColor="@color/white"
-        android:buttonTint="@color/yellow"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/fellOverCheckBox"
-        app:layout_constraintTop_toTopOf="@+id/fellOverCheckBox" />
-
-    <CheckBox
-        android:id="@+id/facedDefenseCheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Faced Defense"
-        android:textColor="@color/white"
-        android:buttonTint="@color/yellow"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/playedDefenseCheckBox"
-        app:layout_constraintTop_toBottomOf="@+id/playedDefenseCheckBox" />
-
-    <CheckBox
-        android:id="@+id/diedCheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Died"
-        android:textColor="@color/white"
-        android:buttonTint="@color/yellow"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/fellOverCheckBox"
-        app:layout_constraintTop_toBottomOf="@+id/fellOverCheckBox" />
-
-    <CheckBox
-        android:id="@+id/ampScoringCheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Amp Scoring"
-        android:textColor="@color/white"
-        android:buttonTint="@color/yellow"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/speakerScoringCheckBox"
-        app:layout_constraintTop_toBottomOf="@+id/speakerScoringCheckBox" />
-
     <EditText
         android:id="@+id/teleCommentsEditText"
         android:layout_width="500dp"
         android:layout_height="75dp"
         android:layout_marginTop="64dp"
-        android:ems="10"
-        android:hint="Comments (restarted, righted, got in the way of teammates, etc)"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
         android:background="@color/grey"
+        android:ems="10"
         android:gravity="center"
+        android:hint="Comments (died, defense, tipped over, got in the way of teammates, etc)"
         android:inputType="text"
-        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/teleSpeakerNotesCountTextView" />

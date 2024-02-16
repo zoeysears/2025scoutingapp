@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 //for some reason when you switch between pages more than once the position resets
 public class MainActivity extends AppCompatActivity {
+    CheckBox preloadCheck;
     EditText scoutName, matchNumber, teamNumber;
     RadioButton red1, red2, red3, pos1, pos2, pos3, pos4;
     RadioButton[] positions;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         scoutName = findViewById(R.id.scoutNameEditText);
         matchNumber = findViewById(R.id.matchNumberEditText);
         teamNumber = findViewById(R.id.teamNumberEditText);
+        preloadCheck = findViewById(R.id.preloadCheckBox);
         red1 = findViewById(R.id.redOneRadioButton);
         red2 = findViewById(R.id.redTwoRadioButton);
         red3 = findViewById(R.id.redThreeRadioButton);
@@ -76,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         scoutName.setText(RecordsActivity.Info.scoutName);
         matchNumber.setText(RecordsActivity.Info.matchNumber);
         teamNumber.setText(RecordsActivity.Info.teamNumber);
+        preloadCheck.setChecked(RecordsActivity.Info.preload);
         switch (RecordsActivity.Info.driverStation) {
             case 1:
                 red1.setChecked(true);
@@ -119,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
         RecordsActivity.Info.scoutName = scoutName.getText().toString();
         RecordsActivity.Info.matchNumber = matchNumber.getText().toString();
         RecordsActivity.Info.teamNumber = teamNumber.getText().toString();
+        RecordsActivity.Info.preload = preloadCheck.isChecked();
         if(red1.isChecked()){
             RecordsActivity.Info.driverStation = 1;
         } else if (red2.isChecked()){
