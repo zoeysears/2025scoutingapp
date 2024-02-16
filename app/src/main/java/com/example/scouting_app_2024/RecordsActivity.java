@@ -6,7 +6,6 @@ public class RecordsActivity {
         public static String scoutName = "";
         public static String matchNumber = "";
         public static String teamNumber = "";
-
         public static boolean preload = false;
         public static byte driverStation = 0;
         public static byte fieldPosition = 0;
@@ -26,11 +25,6 @@ public class RecordsActivity {
         public static boolean harmony = false;
         public static boolean trap = false;
         public static String stageComments = "";
-
-        public static double test = 3.737546328;
-        public static double test1 = 0.7339546;
-        public static double test2 = .7339465;
-        public static double test3 = 3.7370837648723;
 
         /**
          * Turns a boolean into either a 1 or 0 for the JSON file
