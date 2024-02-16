@@ -123,7 +123,7 @@
         android:id="@+id/fieldImageView"
         android:layout_width="680dp"
         android:layout_height="213dp"
-        android:layout_marginBottom="136dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/redside" />
