@@ -4,16 +4,270 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/darkGrey">
+    android:background="@color/darkGrey"
+    tools:layout_editor_absoluteX="440dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <TextView
+        android:id="@+id/autoNetCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="524dp"
+        android:layout_marginEnd="169dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/autoNotesDecrementButton7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="autoDecrementAmpNotes"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/autoTOFCountText"
+        app:layout_constraintTop_toBottomOf="@+id/autoTOFTextView" />
+
+    <Button
+        android:id="@+id/autoNotesIncrementButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="745dp"
+        android:layout_marginEnd="45dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="autoIncrementNotes"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/autoTOFCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="756dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.781"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/autoTOFTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="664dp"
+        android:text="Taken Off Reef"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/autoNotesDecrementButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="496dp"
+        android:layout_marginTop="519dp"
+        android:layout_marginEnd="216dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="autoDecrementAmpNotes"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/autoNotesIncrementButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:onClick="autoIncrementNotes"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/autoLevel4CountText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.917"
+        app:layout_constraintStart_toEndOf="@+id/autoLevel4CountText"
+        app:layout_constraintTop_toTopOf="@+id/autoLevel4CountText"
+        app:layout_constraintVertical_bias="0.305" />
+
+    <TextView
+        android:id="@+id/autoNetTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="464dp"
+        android:text="Net"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/autoNotesDecrementButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="325dp"
+        android:layout_marginEnd="216dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="autoDecrementAmpNotes"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/autoNotesIncrementButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:onClick="autoIncrementNotes"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/autoLevel4CountText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toEndOf="@+id/autoLevel4CountText"
+        app:layout_constraintTop_toTopOf="@+id/autoLevel4CountText"
+        app:layout_constraintVertical_bias="0.305" />
+
+    <TextView
+        android:id="@+id/autoProcessorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:text="Processor"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/autoProcessorCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="336dp"
+        android:layout_marginEnd="169dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.988"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/algeaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="196dp"
+        android:text="Algae"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.805"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/autoSpeakerNotesDecrementButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="19dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="autoDecrementAmpNotes"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoTroughTextView" />
+
+    <Button
+        android:id="@+id/autoSpeakerNotesIncrementButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="55dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="autoIncrementNotes"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/autoTroughTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/autoTroughCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="840dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/autoTroughTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="776dp"
+        android:text="Trough"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/autoLevel4TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="288dp"
+        android:text="Level 4"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/leaveCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="175dp"
+        android:layout_marginTop="144dp"
+        android:buttonTint="@color/yellow"
         android:text="Leave"
         android:textColor="@color/white"
-        android:buttonTint="@color/yellow"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,10 +279,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
+        android:backgroundTint="@color/yellow"
         android:onClick="backMain"
         android:text="Back"
         android:textColor="@color/white"
-        android:backgroundTint="@color/yellow"
         android:textSize="48sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -39,35 +293,37 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/yellow"
         android:onClick="toTele"
         android:text="Next"
         android:textColor="@color/white"
-        android:backgroundTint="@color/yellow"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/autoNotesTextView"
+        android:id="@+id/autoCoralTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:text="Notes"
+        android:layout_marginTop="192dp"
+        android:text="Coral"
         android:textColor="@color/white"
-        android:textSize="60sp"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.143"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/autoNotesCountTextView"
+        android:id="@+id/autoLevel4CountText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="336dp"
         android:text="0"
         android:textColor="@color/white"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -75,51 +331,55 @@
         android:id="@+id/autoNotesIncrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="518dp"
+        android:layout_marginEnd="45dp"
+        android:backgroundTint="@color/yellow"
         android:onClick="autoIncrementNotes"
         android:text="+"
         android:textColor="@color/white"
-        android:backgroundTint="@color/yellow"
         android:textSize="60sp"
-        app:layout_constraintBottom_toBottomOf="@+id/autoNotesCountTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/autoNotesCountTextView"
-        app:layout_constraintTop_toTopOf="@+id/autoNotesCountTextView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/autoNotesDecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="autoDecrementNotes"
+        android:backgroundTint="@color/yellow"
+        android:onClick="autoDecrementAmpNotes"
         android:text="-"
         android:textColor="@color/white"
-        android:backgroundTint="@color/yellow"
         android:textSize="60sp"
-        app:layout_constraintBottom_toBottomOf="@+id/autoNotesCountTextView"
-        app:layout_constraintEnd_toStartOf="@+id/autoNotesCountTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/autoLevel4CountText"
+        app:layout_constraintEnd_toStartOf="@id/autoLevel4CountText"
+        app:layout_constraintHorizontal_bias="0.296"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/autoNotesCountTextView" />
+        app:layout_constraintTop_toTopOf="@+id/autoLevel4CountText"
+        app:layout_constraintVertical_bias="0.305" />
 
     <TextView
-        android:id="@+id/autoAmpNotesTextView"
+        android:id="@+id/autoLevel3TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="450dp"
-        android:text="Amp Notes"
+        android:layout_marginTop="448dp"
+        android:text="Level 3"
         android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/autoAmpNotesCountTextView"
+        android:id="@+id/autoLevel3CountText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="496dp"
         android:text="0"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -127,51 +387,55 @@
         android:id="@+id/autoAmpNotesIncrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="autoIncrementAmpNotes"
+        android:backgroundTint="@color/yellow"
+        android:onClick="autoIncrementNotes"
         android:text="+"
         android:textColor="@color/white"
-        android:backgroundTint="@color/yellow"
         android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="@+id/autoAmpNotesCountTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/autoLevel3CountText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/autoAmpNotesCountTextView"
-        app:layout_constraintTop_toTopOf="@+id/autoAmpNotesCountTextView" />
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toEndOf="@+id/autoLevel3CountText"
+        app:layout_constraintTop_toTopOf="@+id/autoLevel3CountText" />
 
     <Button
         android:id="@+id/autoAmpNotesDecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
         android:onClick="autoDecrementAmpNotes"
         android:text="-"
-        android:textSize="48sp"
         android:textColor="@color/white"
-        android:backgroundTint="@color/yellow"
-        app:layout_constraintBottom_toBottomOf="@+id/autoAmpNotesCountTextView"
-        app:layout_constraintEnd_toStartOf="@+id/autoAmpNotesCountTextView"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/autoLevel3CountText"
+        app:layout_constraintEnd_toStartOf="@+id/autoLevel3CountText"
+        app:layout_constraintHorizontal_bias="0.019"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/autoAmpNotesCountTextView" />
+        app:layout_constraintTop_toTopOf="@+id/autoLevel3CountText" />
 
     <TextView
-        android:id="@+id/autoSpeakerNotesTextView"
+        android:id="@+id/autoLevel2TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="575dp"
-        android:text="Speaker Notes"
+        android:layout_marginTop="592dp"
+        android:text="Level 2"
         android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/autoSpeakerNotesCountTextView"
+        android:id="@+id/autoLevel2CountText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="650dp"
+        android:layout_marginTop="660dp"
         android:text="0"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -179,46 +443,33 @@
         android:id="@+id/autoSpeakerNotesIncrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="autoIncrementSpeakerNotes"
+        android:backgroundTint="@color/yellow"
+        android:onClick="autoIncrementNotes"
         android:text="+"
         android:textColor="@color/white"
-        android:backgroundTint="@color/yellow"
         android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="@+id/autoSpeakerNotesCountTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/autoLevel2CountText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/autoSpeakerNotesCountTextView"
-        app:layout_constraintTop_toTopOf="@+id/autoSpeakerNotesCountTextView" />
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toEndOf="@+id/autoLevel2CountText"
+        app:layout_constraintTop_toTopOf="@+id/autoLevel2CountText"
+        app:layout_constraintVertical_bias="0.2" />
 
     <Button
         android:id="@+id/autoSpeakerNotesDecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="autoDecrementSpeakerNotes"
+        android:backgroundTint="@color/yellow"
+        android:onClick="autoDecrementAmpNotes"
         android:text="-"
         android:textColor="@color/white"
-        android:backgroundTint="@color/yellow"
         android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="@+id/autoSpeakerNotesCountTextView"
-        app:layout_constraintEnd_toStartOf="@+id/autoSpeakerNotesCountTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/autoLevel2CountText"
+        app:layout_constraintEnd_toStartOf="@+id/autoLevel2CountText"
+        app:layout_constraintHorizontal_bias="0.132"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/autoSpeakerNotesCountTextView" />
-
-    <EditText
-        android:id="@+id/autoCommentsEditText"
-        android:layout_width="500dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="748dp"
-        android:ems="10"
-        android:hint="Comments (missed pieces, hitting other robots, incorrect auto, etc)"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:background="@color/grey"
-        android:gravity="center"
-        android:inputType="text"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/autoLevel2CountText"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/autoTextView"

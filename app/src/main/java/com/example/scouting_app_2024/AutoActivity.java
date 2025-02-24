@@ -19,10 +19,9 @@ public class AutoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto);
         leaveCheck = findViewById(R.id.leaveCheckBox);
-        autoNotesCountText = findViewById(R.id.autoNotesCountTextView);
-        autoAmpNotesCountText = findViewById(R.id.autoAmpNotesCountTextView);
-        autoSpeakerNotesCountText = findViewById(R.id.autoSpeakerNotesCountTextView);
-        autoComments = findViewById(R.id.autoCommentsEditText);
+        autoNotesCountText = findViewById(R.id.autoTOFCountText);
+        autoAmpNotesCountText = findViewById(R.id.autoProcessorCountText);
+        autoSpeakerNotesCountText = findViewById(R.id.autoTroughCountText);
         setPrevious();
     }
 
@@ -129,7 +128,6 @@ public class AutoActivity extends AppCompatActivity {
         autoAmpNotesCountText.setText(String.valueOf(autoAmpNotesCount));
         autoSpeakerNotesCount = RecordsActivity.Info.autoSpeakerNotes;
         autoSpeakerNotesCountText.setText(String.valueOf(autoSpeakerNotesCount));
-        autoComments.setText(RecordsActivity.Info.autoComments);
     }
 
     /**
@@ -140,6 +138,5 @@ public class AutoActivity extends AppCompatActivity {
         RecordsActivity.Info.autoNotes = autoNotesCount;
         RecordsActivity.Info.autoAmpNotes = autoAmpNotesCount;
         RecordsActivity.Info.autoSpeakerNotes = autoSpeakerNotesCount;
-        RecordsActivity.Info.autoComments = autoComments.getText().toString();
     }
 }
