@@ -85,10 +85,10 @@ public class RecordsActivity {
             json += String.format("\"TeleSpeaker\": \"%s\",",teleSpeakerNotes);
             json += String.format("\"TeleComment\": \"%s\",",teleComments);
             //stage activity
-            json += String.format("\"Stage\": \"%s\",",stageLevel);
+            json += String.format("\"ClimbLevel\": \"%s\",",climbLevel);
             json += String.format("\"Harmony\": \"%s\",",printBoolean(harmony));
             json += String.format("\"Trap\": \"%s\",",printBoolean(trap));
-            json += String.format("\"StageComment\": \"%s\",}",comments);
+            json += String.format("\"Comments\": \"%s\",}",comments);
             return json;
         }
 
