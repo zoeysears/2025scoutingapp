@@ -25,6 +25,13 @@ public class RecordsActivity {
         public static boolean harmony = false;
         public static boolean trap = false;
         public static String stageComments = "";
+        public static byte autoLevel4;
+        public static byte autoLevel3;
+        public static byte autoLevel2;
+        public static byte autoTrough;
+        public static byte autoProcessor;
+        public static byte autoNet;
+        public static byte autoTOR;
 
         /**
          * Turns a boolean into either a 1 or 0 for the JSON file
@@ -60,6 +67,16 @@ public class RecordsActivity {
             json += String.format("\"AutoAmp\": \"%s\",",autoAmpNotes);
             json += String.format("\"AutoSpeaker\": \"%s\",",autoSpeakerNotes);
             json += String.format("\"AutoComment\": \"%s\",",autoComments);
+
+            json += String.format("\"AutoLevel4\": \"%s\",",autoLevel4);
+            json += String.format("\"AutoLevel3\": \"%s\",",autoLevel3);
+            json += String.format("\"AutoLevel2\": \"%s\",",autoLevel2);
+            json += String.format("\"AutoTrough\": \"%s\",",autoTrough);
+
+            json += String.format("\"AutoNet\": \"%s\",",autoNet);
+            json += String.format("\"AutoTOR\": \"%s\",",autoTOR);
+            json += String.format("\"AutoProcessor\": \"%s\",",autoProcessor);
+
             //tele activity
             json += String.format("\"TeleNote\": \"%s\",",teleNotes);
             json += String.format("\"TeleAmp\": \"%s\",",teleAmpNotes);
@@ -88,6 +105,14 @@ public class RecordsActivity {
             autoAmpNotes = 0;
             autoSpeakerNotes = 0;
             autoComments = "";
+
+            autoLevel4=0;
+            autoLevel3=0;
+            autoLevel2= 0;
+            autoTrough = 0;
+            autoProcessor = 0;
+            autoNet = 0;
+            autoTOR = 0;
             //tele activity
             teleNotes = 0;
             teleAmpNotes = 0;

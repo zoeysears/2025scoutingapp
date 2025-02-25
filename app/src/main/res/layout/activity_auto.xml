@@ -23,27 +23,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/autoNotesDecrementButton7"
+        android:id="@+id/autoTORDecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="28dp"
         android:backgroundTint="@color/yellow"
-        android:onClick="autoDecrementAmpNotes"
+        android:onClick="autoDecrementTOR"
         android:text="-"
         android:textColor="@color/white"
         android:textSize="60sp"
-        app:layout_constraintEnd_toStartOf="@+id/autoTOFCountText"
+        app:layout_constraintEnd_toStartOf="@+id/autoTORCountText"
         app:layout_constraintTop_toBottomOf="@+id/autoTOFTextView" />
 
     <Button
-        android:id="@+id/autoNotesIncrementButton6"
+        android:id="@+id/autoTORIncrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="745dp"
         android:layout_marginEnd="45dp"
         android:backgroundTint="@color/yellow"
-        android:onClick="autoIncrementNotes"
+        android:onClick="autoIncrementTOR"
         android:text="+"
         android:textColor="@color/white"
         android:textSize="60sp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/autoTOFCountText"
+        android:id="@+id/autoTORCountText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="756dp"
@@ -77,27 +77,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/autoNotesDecrementButton6"
+        android:id="@+id/autoNetDecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="496dp"
-        android:layout_marginTop="519dp"
-        android:layout_marginEnd="216dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="@color/yellow"
-        android:onClick="autoDecrementAmpNotes"
+        android:onClick="autoDecrementNet"
         android:text="-"
         android:textColor="@color/white"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/autoNetTextView"
+        app:layout_constraintTop_toBottomOf="@+id/autoNetTextView" />
 
     <Button
         android:id="@+id/autoNotesIncrementButton5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/yellow"
-        android:onClick="autoIncrementNotes"
+        android:onClick="autoIncrementProcessor"
         android:text="+"
         android:textColor="@color/white"
         android:textSize="60sp"
@@ -112,23 +111,23 @@
         android:id="@+id/autoNetTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="464dp"
+        android:layout_marginTop="472dp"
         android:text="Net"
         android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/autoNotesDecrementButton5"
+        android:id="@+id/autoProcessorDecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="325dp"
-        android:layout_marginEnd="216dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginEnd="240dp"
         android:backgroundTint="@color/yellow"
-        android:onClick="autoDecrementAmpNotes"
+        android:onClick="autoDecrementProcessor"
         android:text="-"
         android:textColor="@color/white"
         android:textSize="60sp"
@@ -136,11 +135,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/autoNotesIncrementButton4"
+        android:id="@+id/autoLevel4IncrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/yellow"
-        android:onClick="autoIncrementNotes"
+        android:onClick="autoIncrementLevel4"
         android:text="+"
         android:textColor="@color/white"
         android:textSize="60sp"
@@ -174,7 +173,7 @@
         android:textColor="@color/white"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.988"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -192,13 +191,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/autoSpeakerNotesDecrementButton4"
+        android:id="@+id/autoTroughDecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="23dp"
         android:layout_marginTop="19dp"
         android:backgroundTint="@color/yellow"
-        android:onClick="autoDecrementAmpNotes"
+        android:onClick="autoDecrementTrough"
         android:text="-"
         android:textColor="@color/white"
         android:textSize="48sp"
@@ -206,13 +205,13 @@
         app:layout_constraintTop_toBottomOf="@+id/autoTroughTextView" />
 
     <Button
-        android:id="@+id/autoSpeakerNotesIncrementButton2"
+        android:id="@+id/autoTroughIncrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="216dp"
         android:layout_marginTop="55dp"
         android:backgroundTint="@color/yellow"
-        android:onClick="autoIncrementNotes"
+        android:onClick="autoIncrementTrough"
         android:text="+"
         android:textColor="@color/white"
         android:textSize="48sp"
@@ -328,13 +327,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/autoNotesIncrementButton"
+        android:id="@+id/autoNetIncrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="518dp"
         android:layout_marginEnd="45dp"
         android:backgroundTint="@color/yellow"
-        android:onClick="autoIncrementNotes"
+        android:onClick="autoIncrementNet"
         android:text="+"
         android:textColor="@color/white"
         android:textSize="60sp"
@@ -342,11 +341,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/autoNotesDecrementButton"
+        android:id="@+id/autoLevel4DecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/yellow"
-        android:onClick="autoDecrementAmpNotes"
+        android:onClick="autoDecrementLevel4"
         android:text="-"
         android:textColor="@color/white"
         android:textSize="60sp"
@@ -384,11 +383,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/autoAmpNotesIncrementButton"
+        android:id="@+id/autoLevel3IncrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/yellow"
-        android:onClick="autoIncrementNotes"
+        android:onClick="autoIncrementLevel3"
         android:text="+"
         android:textColor="@color/white"
         android:textSize="48sp"
@@ -399,11 +398,11 @@
         app:layout_constraintTop_toTopOf="@+id/autoLevel3CountText" />
 
     <Button
-        android:id="@+id/autoAmpNotesDecrementButton"
+        android:id="@+id/autoLevel3DecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/yellow"
-        android:onClick="autoDecrementAmpNotes"
+        android:onClick="autoDecrementLevel3"
         android:text="-"
         android:textColor="@color/white"
         android:textSize="48sp"
@@ -440,11 +439,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/autoSpeakerNotesIncrementButton"
+        android:id="@+id/autoLevel2IncrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/yellow"
-        android:onClick="autoIncrementNotes"
+        android:onClick="autoIncrementLevel2"
         android:text="+"
         android:textColor="@color/white"
         android:textSize="48sp"
@@ -456,11 +455,11 @@
         app:layout_constraintVertical_bias="0.2" />
 
     <Button
-        android:id="@+id/autoSpeakerNotesDecrementButton"
+        android:id="@+id/autoLevel2DecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/yellow"
-        android:onClick="autoDecrementAmpNotes"
+        android:onClick="autoDecrementLevel2"
         android:text="-"
         android:textColor="@color/white"
         android:textSize="48sp"
