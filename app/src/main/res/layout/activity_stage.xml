@@ -7,11 +7,11 @@
     android:background="@color/darkGrey">
 
     <TextView
-        android:id="@+id/stageTextView"
+        android:id="@+id/bargeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
-        android:text="STAGE"
+        android:text="Barge"
         android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,26 +47,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/stageCommentsEditText"
+        android:id="@+id/commentsEditText"
         android:layout_width="500dp"
         android:layout_height="75dp"
-        android:layout_marginTop="676dp"
-        android:ems="10"
-        android:hint="Comments (climbed early, buddy climb, fell off the chain, etc)"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:layout_marginTop="732dp"
         android:background="@color/grey"
+        android:ems="10"
         android:gravity="center"
+        android:hint="Comments (climbed early, fell off the chain, etc)"
         android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/stageRadioGroup"
         android:layout_width="485dp"
-        android:layout_height="324dp"
+        android:layout_height="401dp"
         android:layout_marginTop="175dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,70 +77,51 @@
             android:id="@+id/stageRadioTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Stage"
-            android:textColor="@color/white"
             android:background="@color/yellow"
             android:gravity="center"
-            android:textSize="96sp" />
+            android:text="Climb Level"
+            android:textColor="@color/white"
+            android:textSize="60sp" />
+
+        <RadioButton
+            android:id="@+id/noneRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:buttonTint="@color/yellow"
+            android:text="None"
+            android:textColor="@color/white"
+            android:textSize="48sp" />
 
         <RadioButton
             android:id="@+id/parkRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:buttonTint="@color/yellow"
             android:text="Park"
-            android:background="@color/grey"
             android:textColor="@color/white"
-            android:buttonTint="@color/yellow"
             android:textSize="48sp" />
 
         <RadioButton
-            android:id="@+id/onstageRadioButton"
+            android:id="@+id/shallowRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Onstage"
             android:background="@color/grey"
-            android:textColor="@color/white"
             android:buttonTint="@color/yellow"
+            android:text="Shallow (high)"
+            android:textColor="@color/white"
             android:textSize="48sp" />
 
         <RadioButton
-            android:id="@+id/spotlitRadioButton"
+            android:id="@+id/deepRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Spotlit"
             android:background="@color/grey"
-            android:textColor="@color/white"
             android:buttonTint="@color/yellow"
+            android:text="Deep (low)"
+            android:textColor="@color/white"
             android:textSize="48sp" />
     </RadioGroup>
 
-    <CheckBox
-        android:id="@+id/harmonyCheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="550dp"
-        android:text="Harmony"
-        android:scaleX="1.5"
-        android:scaleY="1.5"
-        android:textColor="@color/white"
-        android:buttonTint="@color/yellow"
-        android:textSize="34sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/trapCheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="550dp"
-        android:layout_marginEnd="100dp"
-        android:text="Trap"
-        android:scaleX="1.5"
-        android:scaleY="1.5"
-        android:textColor="@color/white"
-        android:buttonTint="@color/yellow"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

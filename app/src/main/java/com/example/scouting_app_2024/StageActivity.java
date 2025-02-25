@@ -11,19 +11,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class StageActivity extends AppCompatActivity {
     CheckBox harmonyCheck, trapCheck;
-    RadioButton park, onstage, spotlit;
-    EditText stageComments;
+    RadioButton park, shallow, deep, none;
+    EditText comments;
     //Cannot deselect parking options in endgame
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stage);
-        harmonyCheck = findViewById(R.id.harmonyCheckBox);
-        trapCheck = findViewById(R.id.trapCheckBox);
+
         park = findViewById(R.id.parkRadioButton);
-        onstage = findViewById(R.id.onstageRadioButton);
-        spotlit = findViewById(R.id.spotlitRadioButton);
-        stageComments = findViewById(R.id.stageCommentsEditText);
+        shallow = findViewById(R.id.shallowRadioButton);
+        deep = findViewById(R.id.deepRadioButton);
+        none = findViewById(R.id.noneRadioButton);
+
+        comments = findViewById(R.id.commentsEditText);
         setPrevious();
     }
 
@@ -53,42 +54,44 @@ public class StageActivity extends AppCompatActivity {
      * Sets all values to the ones in RecordsActivity so pages don't change whenever you switch between them
      */
     public void setPrevious(){
-        harmonyCheck.setChecked(RecordsActivity.Info.harmony);
-        trapCheck.setChecked(RecordsActivity.Info.trap);
-        switch (RecordsActivity.Info.stageLevel) {
-            case 1:
+
+        switch (RecordsActivity.Info.climbLevel) {
+            case "Park":
                 park.setChecked(true);
                 break;
-            case 2:
-                onstage.setChecked(true);
+            case "Shallow (high)":
+                shallow.setChecked(true);
                 break;
-            case 3:
-                spotlit.setChecked(true);
+            case "Deep (low)":
+                deep.setChecked(true);
+                break;
+            case "None":
+                none.setChecked(true);
                 break;
             default:
                 park.setChecked(false);
-                onstage.setChecked(false);
-                spotlit.setChecked(false);
+                shallow.setChecked(false);
+                deep.setChecked(false);
+                none.setChecked(false);
                 break;
         }
-        stageComments.setText(RecordsActivity.Info.stageComments);
+        comments.setText(RecordsActivity.Info.comments);
     }
 
     /**
      * Stores all current data in RecordsActivity
      */
     public void saveData(){
-        RecordsActivity.Info.harmony = harmonyCheck.isChecked();
-        RecordsActivity.Info.trap = trapCheck.isChecked();
+
         if(park.isChecked()){
-            RecordsActivity.Info.stageLevel = 1;
-        } else if (onstage.isChecked()){
-            RecordsActivity.Info.stageLevel = 2;
-        } else if (spotlit.isChecked()){
-            RecordsActivity.Info.stageLevel = 3;
-        } else {
-            RecordsActivity.Info.stageLevel = 0;
+            RecordsActivity.Info.climbLevel = "Park";
+        } else if (shallow.isChecked()){
+            RecordsActivity.Info.climbLevel = "Shallow (high)";
+        } else if (deep.isChecked()){
+            RecordsActivity.Info.climbLevel = "Deep (low)";
+        } else if (none.isChecked()){
+            RecordsActivity.Info.climbLevel = "None";
         }
-        RecordsActivity.Info.stageComments = stageComments.getText().toString();
+        RecordsActivity.Info.comments = comments.getText().toString();
     }
 }

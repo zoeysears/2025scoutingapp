@@ -24,7 +24,8 @@ public class RecordsActivity {
         public static byte stageLevel = 0;
         public static boolean harmony = false;
         public static boolean trap = false;
-        public static String stageComments = "";
+        public static String climbLevel = "";
+        public static String comments = "";
         public static byte autoLevel4;
         public static byte autoLevel3;
         public static byte autoLevel2;
@@ -32,6 +33,7 @@ public class RecordsActivity {
         public static byte autoProcessor;
         public static byte autoNet;
         public static byte autoTOR;
+
 
         /**
          * Turns a boolean into either a 1 or 0 for the JSON file
@@ -86,7 +88,7 @@ public class RecordsActivity {
             json += String.format("\"Stage\": \"%s\",",stageLevel);
             json += String.format("\"Harmony\": \"%s\",",printBoolean(harmony));
             json += String.format("\"Trap\": \"%s\",",printBoolean(trap));
-            json += String.format("\"StageComment\": \"%s\",}",stageComments);
+            json += String.format("\"StageComment\": \"%s\",}",comments);
             return json;
         }
 
@@ -122,7 +124,8 @@ public class RecordsActivity {
             stageLevel = 0;
             harmony = false;
             trap = false;
-            stageComments = "";
+            comments = "";
+            climbLevel = "";
         }
     }
 }
