@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -208,8 +207,8 @@ public class TeleActivity extends AppCompatActivity {
      *
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
-    public void backAuto(View view) {
-        Intent next = new Intent(this, AutoActivity.class);
+    public void backReef(View view) {
+        Intent next = new Intent(this, AutoReefActivity.class);
         startActivity(next);
         saveData();
     }

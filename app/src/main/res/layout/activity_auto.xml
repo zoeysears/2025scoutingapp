@@ -293,7 +293,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
         android:backgroundTint="@color/yellow"
-        android:onClick="toTele"
+        android:onClick="toReef"
         android:text="Next"
         android:textColor="@color/white"
         android:textSize="48sp"

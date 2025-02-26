@@ -4,22 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AutoActivity extends AppCompatActivity {
     CheckBox leaveCheck;
-    TextView autoNotesCountText, autoAmpNotesCountText, autoSpeakerNotesCountText;
     TextView autoLevel4CountText, autoLevel3CountText, autoLevel2CountText, autoTroughCountText;
 
     byte autoLevel4Count, autoLevel3Count, autoLevel2Count, autoTroughCount;
     TextView autoNetCountText, autoProcessorCountText, autoTORCountText;
-    byte autoNotesCount, autoAmpNotesCount, autoSpeakerNotesCount;
 
     byte autoNetCount, autoProcessorCount, autoTORCount;
-    EditText autoComments;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,9 +32,6 @@ public class AutoActivity extends AppCompatActivity {
         autoNetCountText = findViewById(R.id.autoNetCountText);
         autoProcessorCountText = findViewById(R.id.autoProcessorCountText);
 
-//        autoNotesCountText = findViewById(R.id.autoTORCountText2);
-//        autoAmpNotesCountText = findViewById(R.id.autoProcessorCountText3);
-//        autoSpeakerNotesCountText = findViewById(R.id.autoNetCountText2);
         setPrevious();
     }
 
@@ -47,14 +40,10 @@ public class AutoActivity extends AppCompatActivity {
      *
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
-    public void autoIncrementNotes(View view){
-        autoNotesCount++;
-        autoNotesCountText.setText(String.valueOf(autoNotesCount));
-    }
 
     public void autoIncrementLevel4(View view) {
         if(autoLevel4Count < 12)
-        autoLevel4Count++;
+            autoLevel4Count++;
         autoLevel4CountText.setText(String.valueOf((autoLevel4Count)));
     }
 
@@ -98,12 +87,6 @@ public class AutoActivity extends AppCompatActivity {
      *
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
-    public void autoDecrementNotes(View view){
-        if (autoNotesCount != 0 && autoAmpNotesCount+autoSpeakerNotesCount<autoNotesCount){
-            autoNotesCount--;
-            autoNotesCountText.setText(String.valueOf(autoNotesCount));
-        }
-    }
 
     public void autoDecrementLevel4(View view) {
         if (autoLevel4Count != 0 ) { //&& autoAmpNotesCount+autoSpeakerNotesCount<autoNotesCoun
@@ -156,49 +139,19 @@ public class AutoActivity extends AppCompatActivity {
      * Increments the amp notes count and updates the text
      *
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
-     */
-    public void autoIncrementAmpNotes(View view){
-        if (autoAmpNotesCount+autoSpeakerNotesCount<autoNotesCount+1){
-            autoAmpNotesCount++;
-            autoAmpNotesCountText.setText(String.valueOf(autoAmpNotesCount));
-        }
-    }
 
     /**
      * Decrements the amp notes count and updates the text
      *
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
-    public void autoDecrementAmpNotes(View view){
-        if (autoAmpNotesCount != 0) {
-            autoAmpNotesCount--;
-            autoAmpNotesCountText.setText(String.valueOf(autoAmpNotesCount));
-        }
-    }
 
     /**
      * Increments the speaker notes count and updates the text
      *
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
-    public void autoIncrementSpeakerNotes(View view){
-        if (autoAmpNotesCount+autoSpeakerNotesCount<autoNotesCount+1) {
-            autoSpeakerNotesCount++;
-            autoSpeakerNotesCountText.setText(String.valueOf(autoSpeakerNotesCount));
-        }
-    }
 
-    /**
-     * Decrements the speaker notes count and updates the text
-     *
-     * @param view Makes the method viewable to the xml and allows you to assign the method to a button
-     */
-    public void autoDecrementSpeakerNotes(View view){
-        if (autoSpeakerNotesCount != 0) {
-            autoSpeakerNotesCount--;
-            autoSpeakerNotesCountText.setText(String.valueOf(autoSpeakerNotesCount));
-        }
-    }
 
     /**
      * Moves the xml/page back to main
@@ -216,8 +169,8 @@ public class AutoActivity extends AppCompatActivity {
      *
      * @param view Makes the method viewable to the xml and allows you to assign the method to a button
      */
-    public void toTele(View view){
-        Intent next = new Intent(this, TeleActivity.class);
+    public void toReef(View view){
+        Intent next = new Intent(this, AutoReefActivity.class);
         startActivity(next);
         saveData();
 
@@ -249,19 +202,12 @@ public class AutoActivity extends AppCompatActivity {
         autoTORCount = RecordsActivity.Info.autoTOR;
         autoTORCountText.setText(String.valueOf(autoTORCount));
 
-
-//        autoNotesCountText.setText(String.valueOf(autoNotesCount));
-//        autoAmpNotesCount = RecordsActivity.Info.autoAmpNotes;
-//        autoAmpNotesCountText.setText(String.valueOf(autoAmpNotesCount));
-//        autoSpeakerNotesCount = RecordsActivity.Info.autoSpeakerNotes;
-//        autoSpeakerNotesCountText.setText(String.valueOf(autoSpeakerNotesCount));
     }
 
     /**
      * Stores all current data in RecordsActivity
      */
     public void saveData(){
-
         RecordsActivity.Info.leave = leaveCheck.isChecked();
 
         RecordsActivity.Info.autoLevel4 = autoLevel4Count;
@@ -273,8 +219,5 @@ public class AutoActivity extends AppCompatActivity {
         RecordsActivity.Info.autoProcessor = autoProcessorCount;
         RecordsActivity.Info.autoTOR = autoTORCount;
 
-//        RecordsActivity.Info.autoNotes = autoNotesCount;
-//        RecordsActivity.Info.autoAmpNotes = autoAmpNotesCount;
-//        RecordsActivity.Info.autoSpeakerNotes = autoSpeakerNotesCount;
     }
 }

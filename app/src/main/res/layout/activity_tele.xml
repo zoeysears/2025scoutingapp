@@ -308,7 +308,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
         android:backgroundTint="@color/yellow"
-        android:onClick="backAuto"
+        android:onClick="backReef"
         android:text="Back"
         android:textColor="@color/white"
         android:textSize="48sp"

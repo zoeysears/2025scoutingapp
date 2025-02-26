@@ -1,5 +1,7 @@
 package com.example.scouting_app_2024;
 
+import android.widget.CheckBox;
+
 public class RecordsActivity {
     public static class Info {
         //main activity
@@ -45,6 +47,18 @@ public class RecordsActivity {
         public static boolean died = false;
         public static boolean broke = false;
         public static boolean defense = false;
+        public static boolean aCheck = false;
+        public static boolean bCheck = false;
+        public static boolean cCheck = false;
+        public static boolean dCheck = false;
+        public static boolean eCheck = false;
+        public static boolean fCheck = false;
+        public static boolean gCheck = false;
+        public static boolean hCheck = false;
+        public static boolean iCheck = false;
+        public static boolean jCheck = false;
+        public static boolean kCheck = false;
+        public static boolean lCheck = false;
 
 
 
@@ -117,6 +131,19 @@ public class RecordsActivity {
             json += String.format("\"Broke\": \"%d\",",printBoolean(broke));
             json += String.format("\"Defense\": \"%d\",",printBoolean(defense));
 
+            json += String.format("\"ACheck\": \"%d\",",printBoolean(aCheck));
+            json += String.format("\"BCheck\": \"%d\",",printBoolean(bCheck));
+            json += String.format("\"CCheck\": \"%d\",",printBoolean(cCheck));
+            json += String.format("\"DCheck\": \"%d\",",printBoolean(dCheck));
+            json += String.format("\"ECheck\": \"%d\",",printBoolean(eCheck));
+            json += String.format("\"FCheck\": \"%d\",",printBoolean(fCheck));
+            json += String.format("\"GCheck\": \"%d\",",printBoolean(gCheck));
+            json += String.format("\"HCheck\": \"%d\",",printBoolean(hCheck));
+            json += String.format("\"ICheck\": \"%d\",",printBoolean(iCheck));
+            json += String.format("\"JCheck\": \"%d\",",printBoolean(jCheck));
+            json += String.format("\"KCheck\": \"%d\",",printBoolean(kCheck));
+            json += String.format("\"LCheck\": \"%d\",",printBoolean(lCheck));
+
             return json;
         }
 
@@ -165,6 +192,19 @@ public class RecordsActivity {
             trap = false;
             comments = "";
             climbLevel = "";
+           aCheck = false;
+           bCheck = false;
+           cCheck = false;
+           dCheck = false;
+           eCheck = false;
+           fCheck = false;
+           gCheck = false;
+           hCheck = false;
+           iCheck = false;
+           jCheck = false;
+           kCheck = false;
+           lCheck = false;
+
         }
     }
 }
