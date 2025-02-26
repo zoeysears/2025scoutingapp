@@ -13,12 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="40dp"
+        android:background="@color/grey"
         android:ems="10"
         android:hint="Scout Name"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:background = "@color/grey"
         android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -68,40 +68,40 @@
             android:id="@+id/driverStationTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Driver Station"
-            android:textColor="@color/white"
             android:background="@color/yellow"
             android:gravity="center"
+            android:text="Driver Station"
+            android:textColor="@color/white"
             android:textSize="60sp" />
 
         <RadioButton
             android:id="@+id/redOneRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Red 1"
             android:background="@color/grey"
-            android:textColor="@color/white"
             android:buttonTint="@color/yellow"
+            android:text="Red 1"
+            android:textColor="@color/white"
             android:textSize="48sp" />
 
         <RadioButton
             android:id="@+id/redTwoRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Red 2"
             android:background="@color/grey"
-            android:textColor="@color/white"
             android:buttonTint="@color/yellow"
+            android:text="Red 2"
+            android:textColor="@color/white"
             android:textSize="48sp" />
 
         <RadioButton
             android:id="@+id/redThreeRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Red 3"
             android:background="@color/grey"
-            android:textColor="@color/white"
             android:buttonTint="@color/yellow"
+            android:text="Red 3"
+            android:textColor="@color/white"
             android:textSize="48sp" />
     </RadioGroup>
 
@@ -109,98 +109,122 @@
         android:id="@+id/mainNextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
         android:onClick="toAuto"
         android:text="Next"
         android:textColor="@color/white"
-        android:backgroundTint="@color/yellow"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="@+id/teamNumberEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/matchNumberEditText"
         app:layout_constraintTop_toTopOf="@+id/scoutNameEditText" />
 
+    <CheckBox
+        android:id="@+id/preloadCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="576dp"
+        android:buttonTint="@color/yellow"
+        android:text="Preloaded"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:id="@+id/fieldImageView"
-        android:layout_width="680dp"
-        android:layout_height="213dp"
-        android:layout_marginBottom="76dp"
+        android:id="@+id/imageView2"
+        android:layout_width="732dp"
+        android:layout_height="394dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/redside" />
+        app:srcCompat="@drawable/starting2025" />
 
     <RadioButton
         android:id="@+id/fieldPositionOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="680dp"
         android:buttonTint="@color/yellow"
         android:onClick="clicked"
         android:scaleX="2"
         android:scaleY="2"
         android:text=""
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/fieldImageView"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fieldPositionTwo"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <RadioButton
         android:id="@+id/fieldPositionTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="66dp"
         android:buttonTint="@color/yellow"
         android:onClick="clicked"
         android:scaleX="2"
         android:scaleY="2"
         android:text=""
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/fieldPositionOne"
-        app:layout_constraintEnd_toStartOf="@+id/fieldPositionOne" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/fieldPositionThree"
+        app:layout_constraintStart_toEndOf="@+id/fieldPositionOne" />
 
     <RadioButton
         android:id="@+id/fieldPositionThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="180dp"
+        android:layout_marginStart="62dp"
         android:buttonTint="@color/yellow"
         android:onClick="clicked"
         android:scaleX="2"
         android:scaleY="2"
         android:text=""
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/fieldPositionOne"
-        app:layout_constraintEnd_toStartOf="@+id/fieldPositionOne"
-        app:layout_constraintTop_toTopOf="@+id/fieldPositionOne"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toEndOf="@+id/fieldPositionTwo"
+        app:layout_constraintTop_toTopOf="@+id/fieldPositionFour" />
 
     <RadioButton
         android:id="@+id/fieldPositionFour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="220dp"
+        android:layout_marginEnd="74dp"
+        android:buttonTint="@color/yellow"
         android:onClick="clicked"
         android:scaleX="2"
         android:scaleY="2"
         android:text=""
-        android:buttonTint="@color/yellow"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/fieldPositionTwo"
-        app:layout_constraintEnd_toStartOf="@+id/fieldPositionTwo"
-        app:layout_constraintTop_toTopOf="@+id/fieldPositionTwo"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/fieldPositionFive"
+        app:layout_constraintEnd_toStartOf="@+id/fieldPositionFive" />
 
-    <CheckBox
-        android:id="@+id/preloadCheckBox"
+    <RadioButton
+        android:id="@+id/fieldPositionFive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="576dp"
-        android:text="Preloaded"
-        android:textColor="@color/white"
+        android:layout_marginEnd="47dp"
         android:buttonTint="@color/yellow"
+        android:onClick="clicked"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text=""
         android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/fieldPositionSix"
+        app:layout_constraintEnd_toStartOf="@+id/fieldPositionSix" />
+
+    <RadioButton
+        android:id="@+id/fieldPositionSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="276dp"
+        android:buttonTint="@color/yellow"
+        android:onClick="clicked"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text=""
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
