@@ -75,32 +75,32 @@
             android:textSize="60sp" />
 
         <RadioButton
-            android:id="@+id/redOneRadioButton"
+            android:id="@+id/blueOneRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/grey"
             android:buttonTint="@color/yellow"
-            android:text="Red 1"
+            android:text="Blue 1"
             android:textColor="@color/white"
             android:textSize="48sp" />
 
         <RadioButton
-            android:id="@+id/redTwoRadioButton"
+            android:id="@+id/blueTwoRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/grey"
             android:buttonTint="@color/yellow"
-            android:text="Red 2"
+            android:text="Blue 2"
             android:textColor="@color/white"
             android:textSize="48sp" />
 
         <RadioButton
-            android:id="@+id/redThreeRadioButton"
+            android:id="@+id/blueThreeRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/grey"
             android:buttonTint="@color/yellow"
-            android:text="Red 3"
+            android:text="Blue 3"
             android:textColor="@color/white"
             android:textSize="48sp" />
     </RadioGroup>
