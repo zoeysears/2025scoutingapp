@@ -1,9 +1,8 @@
-package com.example.scouting_app_2024;
+package com.example.scouting_app_2025;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 

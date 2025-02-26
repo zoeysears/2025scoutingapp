@@ -1,6 +1,4 @@
-package com.example.scouting_app_2024;
-
-import android.widget.CheckBox;
+package com.example.scouting_app_2025;
 
 public class RecordsActivity {
     public static class Info {

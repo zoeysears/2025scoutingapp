@@ -1,4 +1,4 @@
-package com.example.scouting_app_2024;
+package com.example.scouting_app_2025;
 
 import android.content.Context;
 

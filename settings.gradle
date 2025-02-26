@@ -12,6 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "scouting-app-2024"
+rootProject.name = "scouting-app-2025"
 include ':app'
 include ':QRGenerator'
