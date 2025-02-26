@@ -13,19 +13,8 @@ public class RecordsActivity {
         public static byte fieldPosition = 0;
         //auto activity
         public static boolean leave = false;
-        public static byte autoNotes = 0;
-        public static byte autoAmpNotes = 0;
-        public static byte autoSpeakerNotes = 0;
-        public static String autoComments = "";
-        //tele activity
-        public static byte teleNotes = 0;
-        public static byte teleAmpNotes = 0;
-        public static byte teleSpeakerNotes = 0;
-        public static String teleComments = "";
+
         //stage activity
-        public static byte stageLevel = 0;
-        public static boolean harmony = false;
-        public static boolean trap = false;
         public static String climbLevel = "";
         public static String comments = "";
         public static byte autoLevel4;
@@ -94,10 +83,7 @@ public class RecordsActivity {
             json += String.format("\"Pos\": \"%s\",",fieldPosition);
             //auto activity
             json += String.format("\"Leave\": \"%d\",",printBoolean(leave));
-            json += String.format("\"AutoNote\": \"%s\",",autoNotes);
-            json += String.format("\"AutoAmp\": \"%s\",",autoAmpNotes);
-            json += String.format("\"AutoSpeaker\": \"%s\",",autoSpeakerNotes);
-            json += String.format("\"AutoComment\": \"%s\",",autoComments);
+
 
             json += String.format("\"AutoLevel4\": \"%s\",",autoLevel4);
             json += String.format("\"AutoLevel3\": \"%s\",",autoLevel3);
@@ -108,15 +94,10 @@ public class RecordsActivity {
             json += String.format("\"AutoTOR\": \"%s\",",autoTOR);
             json += String.format("\"AutoProcessor\": \"%s\",",autoProcessor);
 
-            //tele activity
-            json += String.format("\"TeleNote\": \"%s\",",teleNotes);
-            json += String.format("\"TeleAmp\": \"%s\",",teleAmpNotes);
-            json += String.format("\"TeleSpeaker\": \"%s\",",teleSpeakerNotes);
-            json += String.format("\"TeleComment\": \"%s\",",teleComments);
+
             //stage activity
             json += String.format("\"ClimbLevel\": \"%s\",",climbLevel);
-            json += String.format("\"Harmony\": \"%s\",",printBoolean(harmony));
-            json += String.format("\"Trap\": \"%s\",",printBoolean(trap));
+
             json += String.format("\"Comments\": \"%s\",}",comments);
 
             json += String.format("\"TeleLevel4\": \"%s\",",teleLevel4);
@@ -158,10 +139,6 @@ public class RecordsActivity {
             fieldPosition = 0;
             //auto activity
             leave = false;
-            autoNotes = 0;
-            autoAmpNotes = 0;
-            autoSpeakerNotes = 0;
-            autoComments = "";
 
             autoLevel4=0;
             autoLevel3=0;
@@ -171,10 +148,7 @@ public class RecordsActivity {
             autoNet = 0;
             autoTOR = 0;
             //tele activity
-            teleNotes = 0;
-            teleAmpNotes = 0;
-            teleSpeakerNotes = 0;
-            teleComments = "";
+
 
             teleLevel4 =0;
             teleLevel3 =0;
@@ -187,9 +161,7 @@ public class RecordsActivity {
             defense = false;
             broke = false;
             //stage activity
-            stageLevel = 0;
-            harmony = false;
-            trap = false;
+
             comments = "";
             climbLevel = "";
            aCheck = false;

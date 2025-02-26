@@ -10,7 +10,6 @@ import android.widget.RadioButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class StageActivity extends AppCompatActivity {
-    CheckBox harmonyCheck, trapCheck;
     RadioButton park, shallow, deep, none;
     EditText comments;
     //Cannot deselect parking options in endgame
