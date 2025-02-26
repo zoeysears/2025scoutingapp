@@ -34,6 +34,21 @@ public class RecordsActivity {
         public static byte autoNet;
         public static byte autoTOR;
 
+        public static byte teleLevel4;
+        public static byte teleLevel3;
+        public static byte teleLevel2;
+        public static byte teleTrough;
+        public static byte teleProcessor;
+        public static byte teleNet;
+        public static byte teleTOR;
+
+        public static boolean died = false;
+        public static boolean broke = false;
+        public static boolean defense = false;
+
+
+
+
 
         /**
          * Turns a boolean into either a 1 or 0 for the JSON file
@@ -89,6 +104,19 @@ public class RecordsActivity {
             json += String.format("\"Harmony\": \"%s\",",printBoolean(harmony));
             json += String.format("\"Trap\": \"%s\",",printBoolean(trap));
             json += String.format("\"Comments\": \"%s\",}",comments);
+
+            json += String.format("\"TeleLevel4\": \"%s\",",teleLevel4);
+            json += String.format("\"TeleLevel3\": \"%s\",",teleLevel3);
+            json += String.format("\"TeleLevel2\": \"%s\",",teleLevel2);
+            json += String.format("\"TeleTrough\": \"%s\",",teleTrough);
+
+            json += String.format("\"TeleNet\": \"%s\",",teleNet);
+            json += String.format("\"TeleTOR\": \"%s\",",teleTOR);
+            json += String.format("\"TeleProcessor\": \"%s\",",teleProcessor);
+            json += String.format("\"Died\": \"%d\",",printBoolean(died));
+            json += String.format("\"Broke\": \"%d\",",printBoolean(broke));
+            json += String.format("\"Defense\": \"%d\",",printBoolean(defense));
+
             return json;
         }
 
@@ -120,6 +148,17 @@ public class RecordsActivity {
             teleAmpNotes = 0;
             teleSpeakerNotes = 0;
             teleComments = "";
+
+            teleLevel4 =0;
+            teleLevel3 =0;
+            teleLevel2 =0 ;
+            teleTrough =0;
+            teleProcessor = 0;
+            teleNet = 0;
+            teleTOR = 0;
+            died = false;
+            defense = false;
+            broke = false;
             //stage activity
             stageLevel = 0;
             harmony = false;
