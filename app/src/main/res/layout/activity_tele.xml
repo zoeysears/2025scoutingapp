@@ -12,13 +12,12 @@
         android:id="@+id/defenseCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="176dp"
         android:buttonTint="@color/yellow"
         android:text="Defense"
         android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,182 +25,12 @@
         android:id="@+id/diedCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="76dp"
         android:buttonTint="@color/yellow"
         android:text="Died"
         android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.252"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/teleNetCountText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="524dp"
-        android:layout_marginEnd="169dp"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/autoTORDecrementButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="28dp"
-        android:backgroundTint="@color/yellow"
-        android:onClick="teleDecrementTOR"
-        android:text="-"
-        android:textColor="@color/white"
-        android:textSize="60sp"
-        app:layout_constraintEnd_toStartOf="@+id/teleTORCountText"
-        app:layout_constraintTop_toBottomOf="@+id/teleTOFTextView" />
-
-    <Button
-        android:id="@+id/autoTORIncrementButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="745dp"
-        android:layout_marginEnd="45dp"
-        android:backgroundTint="@color/yellow"
-        android:onClick="teleIncrementTOR"
-        android:text="+"
-        android:textColor="@color/white"
-        android:textSize="60sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/teleTORCountText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="756dp"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.781"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/teleTOFTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:text="Taken Off Reef"
-        android:textColor="@color/white"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.861"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/autoNetDecrementButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="32dp"
-        android:backgroundTint="@color/yellow"
-        android:onClick="teleDecrementNet"
-        android:text="-"
-        android:textColor="@color/white"
-        android:textSize="60sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/teleNetTextView"
-        app:layout_constraintTop_toBottomOf="@+id/teleNetTextView" />
-
-    <Button
-        android:id="@+id/autoNotesIncrementButton5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/yellow"
-        android:onClick="teleIncrementProcessor"
-        android:text="+"
-        android:textColor="@color/white"
-        android:textSize="60sp"
-        app:layout_constraintBottom_toBottomOf="@+id/teleLevel4CountText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.917"
-        app:layout_constraintStart_toEndOf="@+id/teleLevel4CountText"
-        app:layout_constraintTop_toTopOf="@+id/teleLevel4CountText"
-        app:layout_constraintVertical_bias="0.305" />
-
-    <TextView
-        android:id="@+id/teleNetTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="472dp"
-        android:text="Net"
-        android:textColor="@color/white"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.781"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/autoProcessorDecrementButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="324dp"
-        android:layout_marginEnd="240dp"
-        android:backgroundTint="@color/yellow"
-        android:onClick="teleDecrementProcessor"
-        android:text="-"
-        android:textColor="@color/white"
-        android:textSize="60sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/autoLevel4IncrementButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/yellow"
-        android:onClick="teleIncrementLevel4"
-        android:text="+"
-        android:textColor="@color/white"
-        android:textSize="60sp"
-        app:layout_constraintBottom_toBottomOf="@+id/teleLevel4CountText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
-        app:layout_constraintStart_toEndOf="@+id/teleLevel4CountText"
-        app:layout_constraintTop_toTopOf="@+id/teleLevel4CountText"
-        app:layout_constraintVertical_bias="0.305" />
-
-    <TextView
-        android:id="@+id/teleProcessorTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="280dp"
-        android:text="Processor"
-        android:textColor="@color/white"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.843"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/teleProcessorCountText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="336dp"
-        android:layout_marginEnd="169dp"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -209,104 +38,394 @@
         android:id="@+id/algeaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="196dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="8dp"
         android:text="Algae"
         android:textColor="@color/white"
         android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.805"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/teleProcessorTextView"
+        app:layout_constraintStart_toStartOf="@+id/teleProcessorTextView" />
 
-    <Button
-        android:id="@+id/autoTroughDecrementButton"
+    <TextView
+        android:id="@+id/teleCoralTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginBottom="8dp"
+        android:text="Coral"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/teleLevel4TextView"
+        app:layout_constraintEnd_toEndOf="@+id/teleLevel4TextView" />
+
+    <TextView
+        android:id="@+id/teleLevel2CountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="@+id/teleLevel2TextView"
+        app:layout_constraintTop_toBottomOf="@+id/teleLevel2TextView" />
+
+    <Button
+        android:id="@+id/teleLevel3DecrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="teleDecrementLevel3"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/teleLevel3TextView" />
+
+    <TextView
+        android:id="@+id/teleTroughCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="@+id/teleTroughTextView"
+        app:layout_constraintTop_toBottomOf="@+id/teleTroughTextView" />
+
+    <TextView
+        android:id="@+id/teleProcessorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="12dp"
+        android:text="Processor"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/teleNotesIncrementButton5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toStartOf="@+id/teleTORDecrementButton" />
+
+    <Button
+        android:id="@+id/teleProcessorDecrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="teleDecrementProcessor"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/teleProcessorCountText"
+        app:layout_constraintTop_toTopOf="@+id/teleProcessorTextView" />
+
+    <TextView
+        android:id="@+id/teleTORCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/teleTORIncrementButton"
+        app:layout_constraintEnd_toStartOf="@+id/teleTORIncrementButton" />
+
+    <TextView
+        android:id="@+id/teleLevel4CountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="@+id/teleLevel4TextView"
+        app:layout_constraintTop_toBottomOf="@+id/teleLevel4TextView" />
+
+    <Button
+        android:id="@+id/teleTORIncrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="teleIncrementTOR"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teleTOFTextView" />
+
+    <Button
+        android:id="@+id/teleNotesIncrementButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="teleIncrementProcessor"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/teleNetTextView"
+        app:layout_constraintEnd_toEndOf="@+id/teleProcessorTextView"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toEndOf="@+id/teleProcessorTextView" />
+
+    <TextView
+        android:id="@+id/teleProcessorCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/teleProcessorDecrementButton"
+        app:layout_constraintStart_toStartOf="@+id/teleProcessorTextView" />
+
+    <Button
+        android:id="@+id/teleNetIncrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="teleIncrementNet"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.519" />
+
+    <TextView
+        android:id="@+id/teleLevel3CountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="@+id/teleLevel3TextView"
+        app:layout_constraintTop_toBottomOf="@+id/teleLevel3TextView" />
+
+    <Button
+        android:id="@+id/teleLevel2IncrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="teleIncrementLevel2"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintStart_toEndOf="@+id/teleLevel2TextView"
+        app:layout_constraintTop_toBottomOf="@+id/teleLevel2TextView" />
+
+    <TextView
+        android:id="@+id/teleLevel2TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="36dp"
+        android:text="Level 2"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/teleLevel2DecrementButton"
+        app:layout_constraintStart_toEndOf="@+id/teleLevel2DecrementButton" />
+
+    <Button
+        android:id="@+id/teleLevel4IncrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="teleIncrementLevel4"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintStart_toEndOf="@+id/teleLevel4TextView"
+        app:layout_constraintTop_toBottomOf="@+id/teleLevel4TextView" />
+
+    <Button
+        android:id="@+id/teleTORDecrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="teleDecrementTOR"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/teleTORCountText"
+        app:layout_constraintEnd_toStartOf="@+id/teleTORCountText" />
+
+    <TextView
+        android:id="@+id/teleNetTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="4dp"
+        android:text="Net"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/teleNetIncrementButton"
+        app:layout_constraintEnd_toStartOf="@+id/teleNotesIncrementButton5" />
+
+    <Button
+        android:id="@+id/teleNetDecrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="teleDecrementNet"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/teleNetCountText"
+        app:layout_constraintEnd_toStartOf="@+id/teleNetTextView" />
+
+    <Button
+        android:id="@+id/teleTroughIncrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="teleIncrementTrough"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintStart_toEndOf="@+id/teleTroughTextView"
+        app:layout_constraintTop_toTopOf="@+id/teleTroughTextView" />
+
+    <Button
+        android:id="@+id/teleLevel4DecrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="teleDecrementLevel4"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/teleNotesIncrementButton5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/teleNotesIncrementButton5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/teleTroughTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:text="Trough"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/teleTroughDecrementButton"
+        app:layout_constraintTop_toBottomOf="@+id/teleLevel2DecrementButton" />
+
+    <TextView
+        android:id="@+id/teleNetCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="@+id/teleNetTextView"
+        app:layout_constraintTop_toBottomOf="@+id/teleNetTextView" />
+
+    <TextView
+        android:id="@+id/teleLevel4TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Level 4"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/teleLevel4DecrementButton"
+        app:layout_constraintStart_toEndOf="@+id/teleLevel4DecrementButton" />
+
+    <TextView
+        android:id="@+id/teleTOFTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="36dp"
+        android:text="Taken Off Reef"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/teleNetIncrementButton"
+        app:layout_constraintTop_toBottomOf="@+id/teleNetIncrementButton" />
+
+    <TextView
+        android:id="@+id/teleLevel3TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:text="Level 3"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/teleLevel3DecrementButton"
+        app:layout_constraintTop_toBottomOf="@+id/teleLevel4IncrementButton" />
+
+    <Button
+        android:id="@+id/teleLevel3IncrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="teleIncrementLevel3"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintStart_toEndOf="@+id/teleLevel3TextView"
+        app:layout_constraintTop_toTopOf="@+id/teleLevel3TextView" />
+
+    <Button
+        android:id="@+id/teleTroughDecrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
         android:backgroundTint="@color/yellow"
         android:onClick="teleDecrementTrough"
         android:text="-"
         android:textColor="@color/white"
         android:textSize="48sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/autoTroughTextView" />
-
-    <Button
-        android:id="@+id/autoTroughIncrementButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="216dp"
-        android:layout_marginTop="55dp"
-        android:backgroundTint="@color/yellow"
-        android:onClick="teleIncrementTrough"
-        android:text="+"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/autoTroughTextView"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/teleTroughCountText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="840dp"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/autoTroughTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="776dp"
-        android:text="Trough"
-        android:textColor="@color/white"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/teleLevel4TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="288dp"
-        android:text="Level 4"
-        android:textColor="@color/white"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/teleTroughTextView" />
 
     <CheckBox
         android:id="@+id/brokeCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="116dp"
         android:buttonTint="@color/yellow"
         android:text="Broke"
         android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/autoBackButton"
+        android:id="@+id/teleBackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="@color/yellow"
         android:onClick="backReef"
         android:text="Back"
@@ -316,11 +435,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/autoNextButton"
+        android:id="@+id/teleNextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="44dp"
         android:backgroundTint="@color/yellow"
         android:onClick="toStage"
         android:text="Next"
@@ -329,182 +448,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/teleCoralTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="192dp"
-        android:text="Coral"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.143"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/teleLevel4CountText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="336dp"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
-        android:id="@+id/autoNetIncrementButton"
+        android:id="@+id/teleLevel2DecrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="518dp"
-        android:layout_marginEnd="45dp"
-        android:backgroundTint="@color/yellow"
-        android:onClick="teleIncrementNet"
-        android:text="+"
-        android:textColor="@color/white"
-        android:textSize="60sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/autoLevel4DecrementButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/yellow"
-        android:onClick="teleDecrementLevel4"
-        android:text="-"
-        android:textColor="@color/white"
-        android:textSize="60sp"
-        app:layout_constraintBottom_toBottomOf="@+id/teleLevel4CountText"
-        app:layout_constraintEnd_toStartOf="@id/teleLevel4CountText"
-        app:layout_constraintHorizontal_bias="0.296"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/teleLevel4CountText"
-        app:layout_constraintVertical_bias="0.305" />
-
-    <TextView
-        android:id="@+id/teleLevel3TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="448dp"
-        android:text="Level 3"
-        android:textColor="@color/white"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.161"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/teleLevel3CountText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="496dp"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.183"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/autoLevel3IncrementButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/yellow"
-        android:onClick="teleIncrementLevel3"
-        android:text="+"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="@+id/teleLevel3CountText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
-        app:layout_constraintStart_toEndOf="@+id/teleLevel3CountText"
-        app:layout_constraintTop_toTopOf="@+id/teleLevel3CountText" />
-
-    <Button
-        android:id="@+id/autoLevel3DecrementButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/yellow"
-        android:onClick="teleDecrementLevel3"
-        android:text="-"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="@+id/teleLevel3CountText"
-        app:layout_constraintEnd_toStartOf="@+id/teleLevel3CountText"
-        app:layout_constraintHorizontal_bias="0.019"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/teleLevel3CountText" />
-
-    <TextView
-        android:id="@+id/teleLevel2TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="592dp"
-        android:text="Level 2"
-        android:textColor="@color/white"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/teleLevel2CountText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="660dp"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.183"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/autoLevel2IncrementButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/yellow"
-        android:onClick="teleIncrementLevel2"
-        android:text="+"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="@+id/teleLevel2CountText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
-        app:layout_constraintStart_toEndOf="@+id/teleLevel2CountText"
-        app:layout_constraintTop_toTopOf="@+id/teleLevel2CountText"
-        app:layout_constraintVertical_bias="0.2" />
-
-    <Button
-        android:id="@+id/autoLevel2DecrementButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="91dp"
         android:backgroundTint="@color/yellow"
         android:onClick="teleDecrementLevel2"
         android:text="-"
         android:textColor="@color/white"
         android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="@+id/teleLevel2CountText"
-        app:layout_constraintEnd_toStartOf="@+id/teleLevel2CountText"
-        app:layout_constraintHorizontal_bias="0.132"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/teleLevel2CountText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/teleLevel3DecrementButton" />
 
     <TextView
         android:id="@+id/teleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="Tele"
+        android:layout_marginTop="28dp"
+        android:text="TELE"
         android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
