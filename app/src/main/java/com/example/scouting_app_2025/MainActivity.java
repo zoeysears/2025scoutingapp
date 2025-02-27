@@ -12,7 +12,7 @@ import android.widget.RadioButton;
 public class MainActivity extends AppCompatActivity {
     CheckBox preloadCheck;
     EditText scoutName, matchNumber, teamNumber;
-    RadioButton red1, red2, red3, pos1, pos2, pos3, pos4, pos5, pos6;
+    RadioButton red1, red2, red3, pos1, pos2, pos3, pos4, pos5;
     RadioButton[] positions;
     int checkedPosition = -1;
     @Override
@@ -31,9 +31,8 @@ public class MainActivity extends AppCompatActivity {
         pos3 = findViewById(R.id.fieldPositionThree);
         pos4 = findViewById(R.id.fieldPositionFour);
         pos5 = findViewById(R.id.fieldPositionFive);
-        pos6 = findViewById(R.id.fieldPositionSix);
 
-        positions = new RadioButton[]{pos1,pos2,pos3,pos4, pos5, pos6};
+        positions = new RadioButton[]{pos1,pos2,pos3,pos4, pos5};
         setPrevious();
     }
 
@@ -116,9 +115,6 @@ public class MainActivity extends AppCompatActivity {
             case 5:
                 pos5.setChecked(true);
                 break;
-            case 6:
-                pos6.setChecked(true);
-                break;
             default:
                 clearPositions();
                 break;
@@ -157,9 +153,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 4:
                 RecordsActivity.Info.fieldPosition = 5;
-                break;
-            case 5:
-                RecordsActivity.Info.fieldPosition = 6;
                 break;
             default:
                 RecordsActivity.Info.fieldPosition = 0;

@@ -4,11 +4,11 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-02-23T23:13:18.344502Z">
+        <DropdownSelection timestamp="2025-02-26T23:32:34.003270Z">
           <Target type="DEFAULT_BOOT">
-            <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=/Users/zoeysears/.android/avd/Medium_Tablet_API_35.avd" />
-            </handle>
+            <template>
+              <DeviceId pluginId="FirebaseDirectAccess" type="TEMPLATE" identifier="model_id=TB370FU/34" />
+            </template>
           </Target>
         </DropdownSelection>
         <DialogSelection />
